@@ -3,7 +3,7 @@ import type { McpServer } from "vite-plugin-mcp";
 
 export function getAstroServerAddress(
 	mcpServer: McpServer,
-	address?: AddressInfo,
+	address: AddressInfo,
 ) {
 	mcpServer.tool(
 		"get-astro-server-address",
@@ -11,9 +11,7 @@ export function getAstroServerAddress(
 		{},
 		async () => {
 			return {
-				content: [
-					{ type: "text", text: address ? JSON.stringify(address) : "" },
-				],
+				content: [{ type: "text", text: JSON.stringify(address) }],
 			};
 		},
 	);
