@@ -1,7 +1,7 @@
 {
 	"name": "astro-mcp",
 	"version": "0.0.1",
-	"description": "MCP server for Astro",
+	"description": "MCP server for Astro development",
 	"keywords": [
 		"astro-integration",
 		"astro-component",
