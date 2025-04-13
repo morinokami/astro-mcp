@@ -22,7 +22,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        run: pnpm mcp build
 
       - name: Publish
         run: pnpm pkg-pr-new publish
