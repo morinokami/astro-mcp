@@ -1,0 +1,15 @@
+packages:
+  - packages/*
+
+catalog:
+  '@biomejs/biome': 1.9.4
+  '@modelcontextprotocol/sdk': 1.9.0
+  '@types/node': 22.14.1
+  knip: 5.50.2
+  publint: 0.3.11
+  typescript: 5.8.3
+  unbuild: 3.5.0
+
+onlyBuiltDependencies:
+  - '@biomejs/biome'
+  - esbuild

@@ -1,0 +1,16 @@
+{
+	"private": true,
+	"name": "astro-mcp-root",
+	"type": "module",
+	"packageManager": "pnpm@10.8.0",
+	"scripts": {
+		"mcp": "pnpm --filter \"astro-mcp\"",
+		"knip": "knip"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@types/node": "catalog:",
+		"knip": "catalog:",
+		"typescript": "catalog:"
+	}
+}
