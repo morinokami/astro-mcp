@@ -2,7 +2,12 @@
 	"name": "astro-mcp",
 	"version": "0.0.1",
 	"description": "MCP server for Astro",
-	"keywords": ["astro", "modelcontextprotocol", "mcp"],
+	"keywords": [
+		"astro-integration",
+		"astro-component",
+		"modelcontextprotocol",
+		"mcp"
+	],
 	"author": "Shinya Fujino <shf0811@gmail.com> (https://github.com/morinokami)",
 	"license": "MIT",
 	"type": "module",
@@ -27,7 +32,7 @@
 		"publint": "publint"
 	},
 	"dependencies": {
-		"@modelcontextprotocol/sdk": "catalog:"
+		"vite-plugin-mcp": "catalog:"
 	},
 	"devDependencies": {
 		"publint": "catalog:",

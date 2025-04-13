@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "astro": {
+      "url": "http://localhost:4321/__mcp/sse"
+    }
+  }
+}
