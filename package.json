@@ -10,6 +10,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:",
+		"@changesets/changelog-github": "catalog:",
+		"@changesets/cli": "catalog:",
 		"@types/node": "catalog:",
 		"knip": "catalog:",
 		"typescript": "catalog:"
