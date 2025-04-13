@@ -34,8 +34,8 @@ jobs:
       - name: Run Biome check
         run: pnpm biome check packages/astro-mcp
 
-      # - name: Run Knip
-      #   run: pnpm knip
+      - name: Run Knip
+        run: pnpm knip
 
       - name: Build
         run: pnpm mcp build
