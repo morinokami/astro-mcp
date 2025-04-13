@@ -12,6 +12,7 @@ catalog:
   '@types/node': 22.14.1
   astro: 5.6.1
   knip: 5.50.2
+  pkg-pr-new: 0.0.42
   publint: 0.3.11
   typescript: 5.8.3
   unbuild: 3.5.0
