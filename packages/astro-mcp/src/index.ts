@@ -1,8 +1,10 @@
+import type { AddressInfo } from "node:net";
 import type { AstroIntegration, IntegrationResolvedRoute } from "astro";
 import { ViteMcp } from "vite-plugin-mcp";
 
 import { version } from "../package.json";
 import { getAstroConfig } from "./tools/get-astro-config";
+import { getAstroServerAddress } from "./tools/get-astro-server-address";
 import { listAstroRoutes } from "./tools/list-astro-routes";
 
 const INTEGRATION_NAME = "astro-mcp";
@@ -20,6 +22,7 @@ export default function createAstroMcpIntegration(
 	},
 ): AstroIntegration {
 	const astroRoutes: IntegrationResolvedRoute[] = [];
+	const astroServerAddress = {} as AddressInfo;
 
 	return {
 		name: INTEGRATION_NAME,
@@ -37,6 +40,10 @@ export default function createAstroMcpIntegration(
 										enabled: options.updateCursorMcpJson,
 										serverName: SERVER_NAME,
 									},
+									updateVSCodeMcpJson: {
+										enabled: options.updateVSCodeMcpJson,
+										serverName: SERVER_NAME,
+									},
 									mcpServerInfo: {
 										name: SERVER_NAME,
 										version,
@@ -44,6 +51,7 @@ export default function createAstroMcpIntegration(
 									async mcpServerSetup(mcpServer, _viteServer) {
 										getAstroConfig(mcpServer, config);
 										listAstroRoutes(mcpServer, astroRoutes);
+										getAstroServerAddress(mcpServer, astroServerAddress);
 									},
 								}),
 							],
@@ -53,6 +61,14 @@ export default function createAstroMcpIntegration(
 			},
 			"astro:routes:resolved": ({ routes }) => {
 				astroRoutes.push(...routes);
+			},
+			"astro:server:start": ({ address, logger }) => {
+				Object.assign(astroServerAddress, address);
+				const host = address.family === "IPv4" ? address.address : "localhost";
+				const port = address.port;
+				logger.info(
+					`Astro MCP server is running at http://${host}:${port}/__mcp/sse`,
+				);
 			},
 		},
 	};
