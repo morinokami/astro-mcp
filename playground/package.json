@@ -1,0 +1,18 @@
+{
+	"name": "playground",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "catalog:",
+		"@astrojs/rss": "catalog:",
+		"@astrojs/sitemap": "catalog:",
+		"astro": "catalog:",
+		"astro-mcp": "workspace:*"
+	}
+}

@@ -1,1 +1,1 @@
-# Astro MCP
+packages/astro-mcp/README.md
