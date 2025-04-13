@@ -25,4 +25,4 @@ jobs:
         run: pnpm mcp build
 
       - name: Publish
-        run: pnpm pkg-pr-new publish
+        run: pnpm pkg-pr-new publish './packages/astro-mcp'
