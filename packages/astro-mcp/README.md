@@ -1,6 +1,6 @@
 # astro-mcp
 
-MCP server for Astro development, inspired by [antfu](https://github.com/antfu)'s [nuxt-mcp](https://github.com/antfu/nuxt-mcp).
+MCP server to support Astro project development, inspired by [antfu](https://github.com/antfu)'s [nuxt-mcp](https://github.com/antfu/nuxt-mcp).
 
 > [!IMPORTANT]
 > This package is experimental and unstable. Proceed with caution when using it.
