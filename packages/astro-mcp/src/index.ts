@@ -1,5 +1,9 @@
 import type { AddressInfo } from "node:net";
-import type { AstroIntegration, IntegrationResolvedRoute } from "astro";
+import type {
+	AstroConfig,
+	AstroIntegration,
+	IntegrationResolvedRoute,
+} from "astro";
 import { ViteMcp } from "vite-plugin-mcp";
 
 import { version } from "../package.json";
@@ -21,6 +25,7 @@ export default function createAstroMcpIntegration(
 		updateVSCodeMcpJson: true,
 	},
 ): AstroIntegration {
+	const astroConfig = {} as AstroConfig;
 	const astroRoutes: IntegrationResolvedRoute[] = [];
 	const astroServerAddress = {} as AddressInfo;
 
@@ -29,6 +34,7 @@ export default function createAstroMcpIntegration(
 		hooks: {
 			"astro:config:setup": ({ command, config, logger, updateConfig }) => {
 				if (command === "dev") {
+					Object.assign(astroConfig, config);
 					logger.info("Starting Astro MCP server");
 					updateConfig({
 						vite: {
@@ -49,7 +55,7 @@ export default function createAstroMcpIntegration(
 										version,
 									},
 									async mcpServerSetup(mcpServer, _viteServer) {
-										getAstroConfig(mcpServer, config);
+										getAstroConfig(mcpServer, astroConfig);
 										listAstroRoutes(mcpServer, astroRoutes);
 										getAstroServerAddress(mcpServer, astroServerAddress);
 									},
@@ -61,6 +67,9 @@ export default function createAstroMcpIntegration(
 			},
 			"astro:routes:resolved": ({ routes }) => {
 				astroRoutes.push(...routes);
+			},
+			"astro:config:done": ({ config }) => {
+				Object.assign(astroConfig, config);
 			},
 			"astro:server:start": ({ address, logger }) => {
 				Object.assign(astroServerAddress, address);
