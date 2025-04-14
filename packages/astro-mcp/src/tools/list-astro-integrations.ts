@@ -1,29 +1,34 @@
-import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { createCache } from "async-cache-dedupe";
 import type { McpServer } from "vite-plugin-mcp";
 import { z } from "zod";
 
+interface AstroIntegration {
+	name: string;
+	title: string;
+	description: string;
+	image: string;
+	categories: string[];
+	repoUrl: string;
+	npmUrl: string;
+	homepageUrl: string;
+	official: boolean;
+	downloads: number;
+	downloadFactor: number;
+}
+
 const cache = createCache({
-	ttl: 5, // seconds
-	stale: 5, // number of seconds to return data after ttl has expired
+	ttl: 60 * 60 * 12, // 12 hours
+	stale: 60 * 60 * 12, // 12 hours
 	storage: { type: "memory" },
 });
 
 const listAstroIntegrationsCache = cache.define(
 	"list-astro-integrations",
-	async (): Promise<CallToolResult> => {
-		return {
-			content: [{ type: "text", text: "No integrations found" }],
-		};
-	},
-);
-
-const getAstroIntegrationCache = cache.define(
-	"get-astro-integration",
-	async (integration: string): Promise<CallToolResult> => {
-		return {
-			content: [{ type: "text", text: "No integration found" }],
-		};
+	async () => {
+		const repsonse = await fetch(
+			"https://astro.build/api/v1/integrations/?limit=10000",
+		);
+		return (await repsonse.json()).data as AstroIntegration[];
 	},
 );
 
@@ -33,7 +38,18 @@ export async function listAstroIntegrations(mcpServer: McpServer) {
 		"List available Astro integrations.",
 		{},
 		async () => {
-			return await listAstroIntegrationsCache["list-astro-integrations"]();
+			const integrations =
+				await listAstroIntegrationsCache["list-astro-integrations"]();
+			return {
+				content: [
+					{
+						type: "text",
+						text: JSON.stringify(
+							integrations.map((integration) => integration.name),
+						),
+					},
+				],
+			};
 		},
 	);
 }
@@ -42,11 +58,23 @@ export async function getAstroIntegration(mcpServer: McpServer) {
 	mcpServer.tool(
 		"get-astro-integration",
 		"Get information about an Astro integration.",
-		{ integration: z.string() },
-		async ({ integration }) => {
-			return await getAstroIntegrationCache["get-astro-integration"](
-				integration,
+		{ integrationName: z.string() },
+		async ({ integrationName }) => {
+			const integrations =
+				await listAstroIntegrationsCache["list-astro-integrations"]();
+			const integration = integrations.find(
+				(integration) => integration.name === integrationName,
 			);
+			return {
+				content: [
+					{
+						type: "text",
+						text: integration
+							? JSON.stringify(integration, null, 2)
+							: "Not found",
+					},
+				],
+			};
 		},
 	);
 }

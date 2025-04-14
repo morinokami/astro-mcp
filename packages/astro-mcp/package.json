@@ -32,7 +32,6 @@
 		"publint": "publint"
 	},
 	"dependencies": {
-		"@modelcontextprotocol/sdk": "catalog:",
 		"async-cache-dedupe": "catalog:",
 		"vite-plugin-mcp": "catalog:",
 		"zod": "catalog:"
