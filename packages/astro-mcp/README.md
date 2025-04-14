@@ -45,8 +45,9 @@ You can use this URL to connect to the MCP server:
 
 - `get-astro-config`: Get the Astro config
   - Parameters: None
-- `list-astro-routes`: List all the routes in the Astro project
-  - Parameters: None
+- `list-astro-routes`: List all the routes in the Astro project. Optionally filter routes by type (redirect, page, endpoint, or fallback)
+  - Parameters:
+    - `type` (string, optional): `redirect`, `page`, `endpoint`, or `fallback`
 - `get-astro-server-address`: Get the address, family, and port of the Astro server
   - Parameters: None
 

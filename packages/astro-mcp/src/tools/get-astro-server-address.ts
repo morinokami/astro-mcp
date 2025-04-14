@@ -7,11 +7,11 @@ export function getAstroServerAddress(
 ) {
 	mcpServer.tool(
 		"get-astro-server-address",
-		"Get the address, family, and port of the Astro server",
+		"Get the address, family, and port of the Astro server.",
 		{},
 		async () => {
 			return {
-				content: [{ type: "text", text: JSON.stringify(address) }],
+				content: [{ type: "text", text: JSON.stringify(address, null, 2) }],
 			};
 		},
 	);

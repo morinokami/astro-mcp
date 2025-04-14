@@ -5,12 +5,12 @@ export async function getAstroConfig(
 	mcpServer: McpServer,
 	config: AstroConfig,
 ) {
-	mcpServer.tool("get-astro-config", "Get the Astro config", {}, async () => {
+	mcpServer.tool("get-astro-config", "Get the Astro config.", {}, async () => {
 		return {
 			content: [
 				{
 					type: "text",
-					text: JSON.stringify(config),
+					text: JSON.stringify(config, null, 2),
 				},
 			],
 		};
