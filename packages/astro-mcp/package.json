@@ -32,7 +32,8 @@
 		"publint": "publint"
 	},
 	"dependencies": {
-		"vite-plugin-mcp": "catalog:"
+		"vite-plugin-mcp": "catalog:",
+		"zod": "catalog:"
 	},
 	"devDependencies": {
 		"publint": "catalog:",
