@@ -4,7 +4,7 @@ import type {
 	AstroIntegration,
 	IntegrationResolvedRoute,
 } from "astro";
-import { ViteMcp } from "vite-plugin-mcp";
+import { type McpServer, ViteMcp } from "vite-plugin-mcp";
 
 import { version } from "../package.json";
 import { getAstroConfig } from "./tools/get-astro-config";
@@ -32,6 +32,7 @@ export default function createAstroMcpIntegration(
 	const astroConfig = {} as AstroConfig;
 	const astroRoutes: IntegrationResolvedRoute[] = [];
 	const astroServerAddress = {} as AddressInfo;
+	let mcp: McpServer | undefined = undefined;
 
 	return {
 		name: INTEGRATION_NAME,
@@ -59,6 +60,7 @@ export default function createAstroMcpIntegration(
 										version,
 									},
 									async mcpServerSetup(mcpServer, _viteServer) {
+										mcp = mcpServer;
 										getAstroConfig(mcpServer, astroConfig);
 										listAstroRoutes(mcpServer, astroRoutes);
 										getAstroServerAddress(mcpServer, astroServerAddress);
@@ -85,7 +87,25 @@ export default function createAstroMcpIntegration(
 				logger.info(
 					`Astro MCP server is running at ${protocol}://${host}:${port}/__mcp/sse`,
 				);
+
+				const { integrations } = astroConfig;
+				for (const integration of integrations) {
+					const { hooks } = integration;
+					if (mcp && hooks["mcp:setup"]) {
+						hooks["mcp:setup"]({ mcp });
+					}
+				}
 			},
 		},
 	};
+}
+
+declare global {
+	namespace Astro {
+		export interface IntegrationHooks {
+			"mcp:setup"?: (options: {
+				mcp: McpServer;
+			}) => void | Promise<void>;
+		}
+	}
 }

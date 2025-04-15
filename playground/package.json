@@ -14,6 +14,7 @@
 		"@astrojs/rss": "catalog:",
 		"@astrojs/sitemap": "catalog:",
 		"astro": "catalog:",
-		"astro-mcp": "workspace:*"
+		"astro-mcp": "workspace:*",
+		"zod": "catalog:"
 	}
 }
