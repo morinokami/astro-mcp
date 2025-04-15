@@ -26,10 +26,10 @@ Then, add the `astro-mcp` integration to your Astro config:
 ```ts
 import { defineConfig } from "astro/config";
 
-import astroMcp from "astro-mcp";
+import mcp from "astro-mcp";
 
 export default defineConfig({
-  integrations: [astroMcp()],
+  integrations: [mcp()],
 });
 ```
 
