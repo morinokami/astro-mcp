@@ -38,8 +38,8 @@ export default function createAstroMcpIntegration(
 		hooks: {
 			"astro:config:setup": ({ command, config, logger, updateConfig }) => {
 				if (command === "dev") {
-					Object.assign(astroConfig, config);
 					logger.info("Starting Astro MCP server");
+					Object.assign(astroConfig, config);
 					updateConfig({
 						vite: {
 							plugins: [
@@ -79,10 +79,11 @@ export default function createAstroMcpIntegration(
 			},
 			"astro:server:start": ({ address, logger }) => {
 				Object.assign(astroServerAddress, address);
+				const protocol = astroConfig.vite.server?.https ? "https" : "http";
 				const host = address.family === "IPv4" ? address.address : "localhost";
 				const port = address.port;
 				logger.info(
-					`Astro MCP server is running at http://${host}:${port}/__mcp/sse`,
+					`Astro MCP server is running at ${protocol}://${host}:${port}/__mcp/sse`,
 				);
 			},
 		},
