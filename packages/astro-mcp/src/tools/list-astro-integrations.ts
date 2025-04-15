@@ -58,7 +58,11 @@ export async function getAstroIntegration(mcpServer: McpServer) {
 	mcpServer.tool(
 		"get-astro-integration",
 		"Get information about an Astro integration.",
-		{ name: z.string() },
+		{
+			name: z
+				.string()
+				.describe("Name of the Astro integration to get information about"),
+		},
 		async ({ name }) => {
 			const integrations =
 				await listAstroIntegrationsCache["list-astro-integrations"]();

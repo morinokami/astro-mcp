@@ -10,7 +10,12 @@ export async function listAstroRoutes(
 		"list-astro-routes",
 		"List all the routes in the Astro project. Optionally filter routes by type (redirect, page, endpoint, or fallback).",
 		{
-			type: z.enum(["redirect", "page", "endpoint", "fallback"]).optional(),
+			type: z
+				.enum(["redirect", "page", "endpoint", "fallback"])
+				.optional()
+				.describe(
+					"Type of routes to list (redirect, page, endpoint, or fallback)",
+				),
 		},
 		async ({ type }) => {
 			return {
