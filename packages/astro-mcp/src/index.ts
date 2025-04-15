@@ -9,6 +9,10 @@ import { ViteMcp } from "vite-plugin-mcp";
 import { version } from "../package.json";
 import { getAstroConfig } from "./tools/get-astro-config";
 import { getAstroServerAddress } from "./tools/get-astro-server-address";
+import {
+	getAstroIntegration,
+	listAstroIntegrations,
+} from "./tools/list-astro-integrations";
 import { listAstroRoutes } from "./tools/list-astro-routes";
 
 const INTEGRATION_NAME = "astro-mcp";
@@ -58,6 +62,8 @@ export default function createAstroMcpIntegration(
 										getAstroConfig(mcpServer, astroConfig);
 										listAstroRoutes(mcpServer, astroRoutes);
 										getAstroServerAddress(mcpServer, astroServerAddress);
+										listAstroIntegrations(mcpServer);
+										getAstroIntegration(mcpServer);
 									},
 								}),
 							],

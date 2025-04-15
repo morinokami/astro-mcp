@@ -32,6 +32,7 @@
 		"publint": "publint"
 	},
 	"dependencies": {
+		"async-cache-dedupe": "catalog:",
 		"vite-plugin-mcp": "catalog:",
 		"zod": "catalog:"
 	},
