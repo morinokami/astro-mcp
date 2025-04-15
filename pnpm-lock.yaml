@@ -84,7 +84,7 @@ importers:
   packages/astro-mcp:
     dependencies:
       astro:
-        specifier: 'catalog:'
+        specifier: '>=5.0.0'
         version: 5.6.1(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)
       async-cache-dedupe:
         specifier: 'catalog:'
