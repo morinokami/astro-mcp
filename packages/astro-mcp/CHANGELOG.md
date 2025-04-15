@@ -1,5 +1,11 @@
 # astro-mcp
 
+## 0.1.1
+
+### Patch Changes
+
+- [#10](https://github.com/morinokami/astro-mcp/pull/10) [`6ccea47`](https://github.com/morinokami/astro-mcp/commit/6ccea4749e0f5175bfd4ddf5f4fd7312ff45ac99) Thanks [@morinokami](https://github.com/morinokami)! - Fix peerDependencies
+
 ## 0.1.0
 
 ### Minor Changes
