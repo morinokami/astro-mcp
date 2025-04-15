@@ -54,7 +54,7 @@ You can use this URL to connect to the MCP server:
   - Parameters: None
 - `get-astro-integration`: Get information about an Astro integration
   - Parameters:
-    - `integrationName` (string): The name of the Astro integration
+    - `name` (string): The name of the Astro integration
 
 ### Tools from `vite-plugin-mcp`
 
