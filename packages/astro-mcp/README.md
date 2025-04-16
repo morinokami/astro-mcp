@@ -74,6 +74,9 @@ export default function createExampleIntegration(): AstroIntegration {
 - `get-astro-integration`: Get information about an Astro integration
   - Parameters:
     - `name` (string): The name of the Astro integration
+- `search-astro-docs`: Search the Astro documentation for specific topics, concepts, or features. Returns relevant documentation snippets that match your query
+  - Parameters:
+    - `query` (string): The query to search for
 
 ### Tools from `vite-plugin-mcp`
 
