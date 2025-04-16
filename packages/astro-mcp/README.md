@@ -41,6 +41,25 @@ You can use this URL to connect to the MCP server:
 - If you are using VSCode, create an empty `.vscode/mcp.json` file in the root of your project. `astro-mcp` will automatically update this file when the Astro server starts.
 - If you are using Cursor, create an empty `.cursor/mcp.json` file in the root of your project. `astro-mcp` will automatically update this file when the Astro server starts.
 
+### Extending the MCP server
+
+`astro-mcp` provides a hook called `mcp:setup` that other integrations can use to extend the MCP server. This is useful if you want to add custom tools to the MCP server.
+
+```ts
+export default function createExampleIntegration(): AstroIntegration {
+  return {
+    name: "example-integration",
+    hooks: {
+      "mcp:setup": async ({ mcp }) => {
+        mcp.tool("add", { a: z.number(), b: z.number() }, async ({ a, b }) => ({
+          content: [{ type: "text", text: String(a + b) }],
+        }));
+      },
+    },
+  };
+}
+```
+
 ## Tools
 
 - `get-astro-config`: Get the Astro config
