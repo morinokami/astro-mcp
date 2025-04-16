@@ -1,5 +1,11 @@
 # astro-mcp
 
+## 0.2.0
+
+### Minor Changes
+
+- [#12](https://github.com/morinokami/astro-mcp/pull/12) [`5789e72`](https://github.com/morinokami/astro-mcp/commit/5789e729eec5ded697eca59d7a8e10b05f6c572d) Thanks [@morinokami](https://github.com/morinokami)! - Add `mcp:setup` hook
+
 ## 0.1.1
 
 ### Patch Changes
