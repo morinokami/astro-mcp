@@ -5,6 +5,7 @@
 	"packageManager": "pnpm@10.8.1",
 	"scripts": {
 		"mcp": "pnpm --filter \"astro-mcp\"",
+		"docs-search": "pnpm --filter \"astro-docs-search\"",
 		"playground": "pnpm --filter \"playground\"",
 		"knip": "knip"
 	},
