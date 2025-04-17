@@ -27,11 +27,12 @@ jobs:
         with:
           rclone_config: ${{ secrets.RCLONE_CONFIG }}
 
-      - name: Rclone tree
-        run: rclone tree --max-depth 1 astro-mcp:astro-docs
-
-      - name: TODO Sync Astro Docs
+      - name: TODO Sync Astro docs
         run: ls -la astro-docs
 
-      - name: TODO Sync Starlight Docs
-        run: ls -la starlight
+      - name: TODO Sync Starlight docs
+        run: |
+          cd starlight/docs/src/content/docs
+          find . -mindepth 1 -maxdepth 1 -not \( -name "components" -o -name "environmental-impact.md" -o -name "getting-started.mdx" -o -name "guides" -o -name "index.mdx" -o -name "manual-setup.mdx" -o -name "reference" -o -name "resources" \) -print0 | xargs -0 rm -rf
+          cd ..
+          rclone sync docs astro-mcp:astro-docs/starlight
