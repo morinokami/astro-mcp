@@ -36,7 +36,9 @@ jobs:
 
       - name: TODO Sync Astro docs
         working-directory: ./astro-docs
-        run: ls -la
+        run: |
+          git restore-mtime
+          ls -la
 
       - name: Sync Starlight docs
         working-directory: ./starlight
