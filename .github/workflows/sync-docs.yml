@@ -20,25 +20,24 @@ jobs:
         with:
           repository: withastro/docs
           path: astro-docs
-          fetch-depth: 0
 
       - name: Clone Starlight repository
         uses: actions/checkout@v4
         with:
           repository: withastro/starlight
           path: starlight
-          fetch-depth: 0
 
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
         with:
           rclone_config: ${{ secrets.RCLONE_CONFIG }}
 
-      - name: TODO Sync Astro docs
+      - name: Sync Astro docs
         working-directory: ./astro-docs
         run: |
           git restore-mtime
-          ls -la
+          cd src/content/docs
+          rclone sync en astro-mcp:astro-docs/astro
 
       - name: Sync Starlight docs
         working-directory: ./starlight
