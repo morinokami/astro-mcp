@@ -23,7 +23,7 @@ export default {
 			rewrite_query: false,
 			max_num_results: 3,
 			ranking_options: {
-				score_threshold: 0.6,
+				score_threshold: 0.5,
 			},
 		});
 
