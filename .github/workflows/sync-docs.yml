@@ -10,21 +10,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install git-restore-mtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install git-restore-mtime
+
       - name: Clone Astro docs repository
         uses: actions/checkout@v4
         with:
           repository: withastro/docs
           path: astro-docs
           fetch-depth: 0
-
-      - name: Restore Git modification time for Astro docs
-        working-directory: ./astro-docs
-        run: |
-          git ls-tree -r --name-only HEAD | while read filename; do
-            timestamp=$(git log -1 --format=%at -- "$filename")
-            touch -t "$(date -d "@$timestamp" +'%Y%m%d%H%M.%S')" "$filename"
-          done
-        shell: bash
 
       - name: Clone Starlight repository
         uses: actions/checkout@v4
@@ -33,26 +29,20 @@ jobs:
           path: starlight
           fetch-depth: 0
 
-      - name: Restore Git modification time for Starlight
-        working-directory: ./starlight
-        run: |
-          git ls-tree -r --name-only HEAD | while read filename; do
-            timestamp=$(git log -1 --format=%at -- "$filename")
-            touch -t "$(date -d "@$timestamp" +'%Y%m%d%H%M.%S')" "$filename"
-          done
-        shell: bash
-
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
         with:
           rclone_config: ${{ secrets.RCLONE_CONFIG }}
 
       - name: TODO Sync Astro docs
-        run: ls -la astro-docs
+        working-directory: ./astro-docs
+        run: ls -la
 
-      - name: TODO Sync Starlight docs
+      - name: Sync Starlight docs
+        working-directory: ./starlight
         run: |
-          cd starlight/docs/src/content/docs
+          git restore-mtime
+          cd docs/src/content/docs
           find . -mindepth 1 -maxdepth 1 -not \( -name "components" -o -name "environmental-impact.md" -o -name "getting-started.mdx" -o -name "guides" -o -name "index.mdx" -o -name "manual-setup.mdx" -o -name "reference" -o -name "resources" \) -print0 | xargs -0 rm -rf
           cd ..
           rclone sync docs astro-mcp:astro-docs/starlight
