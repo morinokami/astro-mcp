@@ -14,6 +14,7 @@ import {
 	listAstroIntegrations,
 } from "./tools/list-astro-integrations";
 import { listAstroRoutes } from "./tools/list-astro-routes";
+import { searchAstroDocs } from "./tools/search-astro-docs";
 
 const INTEGRATION_NAME = "astro-mcp";
 const SERVER_NAME = "astro";
@@ -66,6 +67,7 @@ export default function createAstroMcpIntegration(
 										getAstroServerAddress(mcpServer, astroServerAddress);
 										listAstroIntegrations(mcpServer);
 										getAstroIntegration(mcpServer);
+										searchAstroDocs(mcpServer);
 									},
 								}),
 							],

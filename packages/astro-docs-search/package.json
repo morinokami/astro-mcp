@@ -1,0 +1,16 @@
+{
+	"private": true,
+	"name": "astro-docs-search",
+	"type": "module",
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "catalog:",
+		"typescript": "catalog:",
+		"wrangler": "catalog:"
+	}
+}
