@@ -15,12 +15,32 @@ jobs:
         with:
           repository: withastro/docs
           path: astro-docs
+          fetch-depth: 0
+
+      - name: Restore Git modification time for Astro docs
+        working-directory: ./astro-docs
+        run: |
+          git ls-tree -r --name-only HEAD | while read filename; do
+            timestamp=$(git log -1 --format=%at -- "$filename")
+            touch -t "$(date -d "@$timestamp" +'%Y%m%d%H%M.%S')" "$filename"
+          done
+        shell: bash
 
       - name: Clone Starlight repository
         uses: actions/checkout@v4
         with:
           repository: withastro/starlight
           path: starlight
+          fetch-depth: 0
+
+      - name: Restore Git modification time for Starlight
+        working-directory: ./starlight
+        run: |
+          git ls-tree -r --name-only HEAD | while read filename; do
+            timestamp=$(git log -1 --format=%at -- "$filename")
+            touch -t "$(date -d "@$timestamp" +'%Y%m%d%H%M.%S')" "$filename"
+          done
+        shell: bash
 
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
