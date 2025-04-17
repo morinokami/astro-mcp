@@ -1,0 +1,38 @@
+name: Sync Astro Docs
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Clone Astro docs repository
+        uses: actions/checkout@v4
+        with:
+          repository: withastro/docs
+          path: astro-docs
+
+      - name: Clone Starlight repository
+        uses: actions/checkout@v4
+        with:
+          repository: withastro/starlight
+          path: starlight
+
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
+        with:
+          rclone_config: ${{ secrets.RCLONE_CONFIG }}
+
+      - name: Rclone tree
+        run: rclone tree --max-depth 1 astro-mcp:astro-docs
+
+      - name: TODO Sync Astro Docs
+        run: ls -la astro-docs
+
+      - name: TODO Sync Starlight Docs
+        run: ls -la starlight
