@@ -18,6 +18,10 @@ export default {
 		}
 
 		const { query } = (await request.json()) as RequestBody;
+		if (query.length === 0) {
+			return new Response("Bad request", { status: 400 });
+		}
+
 		const docs = await env.AI.autorag("astro-docs-search").search({
 			query,
 			rewrite_query: false,
