@@ -1,5 +1,11 @@
 # astro-mcp
 
+## 0.3.0
+
+### Minor Changes
+
+- [#14](https://github.com/morinokami/astro-mcp/pull/14) [`c8bb38e`](https://github.com/morinokami/astro-mcp/commit/c8bb38e8f01ab4d11eb4d16a94bf6a7f9e56403e) Thanks [@morinokami](https://github.com/morinokami)! - Add search-astro-docs tool
+
 ## 0.2.0
 
 ### Minor Changes
