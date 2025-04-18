@@ -36,14 +36,11 @@ jobs:
         working-directory: ./astro-docs
         run: |
           git restore-mtime
-          cd src/content/docs
-          rclone sync en astro-mcp:astro-docs/astro
+          rclone sync ./src/content/docs/en astro-mcp:astro-docs/astro
 
       - name: Sync Starlight docs
         working-directory: ./starlight
         run: |
           git restore-mtime
-          cd docs/src/content/docs
-          find . -mindepth 1 -maxdepth 1 -not \( -name "components" -o -name "environmental-impact.md" -o -name "getting-started.mdx" -o -name "guides" -o -name "index.mdx" -o -name "manual-setup.mdx" -o -name "reference" -o -name "resources" \) -print0 | xargs -0 rm -rf
-          cd ..
-          rclone sync docs astro-mcp:astro-docs/starlight
+          find ./docs/src/content/docs -mindepth 1 -maxdepth 1 -not \( -name "components" -o -name "environmental-impact.md" -o -name "getting-started.mdx" -o -name "guides" -o -name "index.mdx" -o -name "manual-setup.mdx" -o -name "reference" -o -name "resources" \) -print0 | xargs -0 rm -rf
+          rclone sync ./docs/src/content/docs astro-mcp:astro-docs/starlight
