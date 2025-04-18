@@ -1,8 +1,7 @@
 name: Sync Astro Docs
 
 on:
-  schedule:
-    - cron: "0 10 * * *"
+  workflow_dispatch:
 
 jobs:
   sync-docs:
@@ -37,11 +36,13 @@ jobs:
         working-directory: ./astro-docs
         run: |
           git restore-mtime
-          rclone sync ./src/content/docs/en astro-mcp:astro-docs/astro
+          rclone sync ./src/content/docs/en astro-mcp:astro-docs/astro --include "*.mdx" --header-upload "Content-Type: text/mdx"
+          rclone sync ./src/content/docs/en astro-mcp:astro-docs/astro --include "*.md" --header-upload "Content-Type: text/markdown"
 
       - name: Sync Starlight docs
         working-directory: ./starlight
         run: |
           git restore-mtime
           find ./docs/src/content/docs -mindepth 1 -maxdepth 1 -not \( -name "components" -o -name "environmental-impact.md" -o -name "getting-started.mdx" -o -name "guides" -o -name "index.mdx" -o -name "manual-setup.mdx" -o -name "reference" -o -name "resources" \) -print0 | xargs -0 rm -rf
-          rclone sync ./docs/src/content/docs astro-mcp:astro-docs/starlight
+          rclone sync ./docs/src/content/docs astro-mcp:astro-docs/starlight --include "*.mdx" --header-upload "Content-Type: text/mdx"
+          rclone sync ./docs/src/content/docs astro-mcp:astro-docs/starlight --include "*.md" --header-upload "Content-Type: text/markdown"
