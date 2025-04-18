@@ -5,6 +5,12 @@ MCP server to support Astro project development, inspired by [antfu](https://git
 > [!IMPORTANT]
 > This package is experimental and unstable. Proceed with caution when using it.
 
+`astro-mcp` aims to help models understand your Astro project better, by providing them with information that cannot be easily accessed just by looking at the project files, such as:
+
+- Runtime information about the Astro server
+- Up-to-date Astro docs content
+- Information about the Astro integrations you are using
+
 ## Installation
 
 In your Astro project directory, run the following command:
