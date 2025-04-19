@@ -25,7 +25,7 @@ export default {
 		const docs = await env.AI.autorag("astro-docs-search").search({
 			query,
 			rewrite_query: false,
-			max_num_results: 3,
+			max_num_results: 5, // TODO: Make this configurable?
 			ranking_options: {
 				score_threshold: 0.5,
 			},
