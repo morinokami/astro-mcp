@@ -1,27 +1,9 @@
+import type { AutoRagSearchResponse } from "@cloudflare/workers-types";
 import type { McpServer } from "vite-plugin-mcp";
 import { z } from "zod";
 
-interface DocContent {
-	id: string;
-	type: string;
-	text: string;
-}
-
-interface DocAttributes {
-	timestamp: number;
-	folder: string;
-}
-
-interface DocResult {
-	file_id: string;
-	filename: string;
-	score: number;
-	attributes: DocAttributes;
-	content: DocContent[];
-}
-
 interface SearchResponse {
-	docs: DocResult[];
+	docs: AutoRagSearchResponse["data"];
 }
 
 export async function searchAstroDocs(mcpServer: McpServer) {

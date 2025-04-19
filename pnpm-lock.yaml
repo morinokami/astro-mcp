@@ -111,6 +111,9 @@ importers:
         specifier: 'catalog:'
         version: 3.24.2
     devDependencies:
+      '@cloudflare/workers-types':
+        specifier: 'catalog:'
+        version: 4.20250416.0
       astro:
         specifier: 'catalog:'
         version: 5.6.1(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)

@@ -37,6 +37,7 @@
 		"zod": "catalog:"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "catalog:",
 		"astro": "catalog:",
 		"publint": "catalog:",
 		"typescript": "catalog:",
