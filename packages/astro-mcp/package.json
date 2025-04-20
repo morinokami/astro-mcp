@@ -1,6 +1,6 @@
 {
 	"name": "astro-mcp",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "MCP server to support Astro project development",
 	"keywords": [
 		"astro-integration",
@@ -25,7 +25,9 @@
 	"main": "./dist/index.mjs",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "unbuild",
 		"typecheck": "tsc --noEmit",
