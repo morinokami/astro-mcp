@@ -7,6 +7,7 @@
 		"mcp": "pnpm --filter \"astro-mcp\"",
 		"docs-search": "pnpm --filter \"astro-docs-search\"",
 		"playground": "pnpm --filter \"playground\"",
+		"inspect": "pnpm dlx @modelcontextprotocol/inspector http://localhost:4321/__mcp/sse",
 		"knip": "knip"
 	},
 	"devDependencies": {
