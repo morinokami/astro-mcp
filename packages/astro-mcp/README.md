@@ -68,16 +68,16 @@ export default function createExampleIntegration(): AstroIntegration {
 
 ## Tools
 
-- `get-astro-config`: Get the Astro config
+- `get-astro-config`: Get the Astro config object containing comprehensive project settings including file paths (root, src, public, output directories), site URL, build options, server settings, enabled integrations, markdown processing configuration, image handling, Vite plugins, security settings, and experimental features
   - Parameters: None
-- `list-astro-routes`: List all the routes in the Astro project. Optionally filter routes by type (redirect, page, endpoint, or fallback)
+- `list-astro-routes`: List detailed routing information from your Astro project, including all routes with their file entrypoints, URL patterns, dynamic parameters, pre-rendering status, and route types. Optionally filter by type to focus on specific route categories
   - Parameters:
     - `type` (string, optional): `redirect`, `page`, `endpoint`, or `fallback`
-- `get-astro-server-address`: Get the address, family, and port of the Astro server
+- `get-astro-server-address`: Get the current network address, IP protocol family, and port number of the running Astro development server
   - Parameters: None
-- `list-astro-integrations`: List available Astro integrations
+- `list-astro-integrations`: List all Astro integrations available in the ecosystem
   - Parameters: None
-- `get-astro-integration`: Get information about an Astro integration
+- `get-astro-integration`: Get detailed metadata about a specific Astro integration, including its name, description, categories, repository links, npm information, related website links, official status, and download statistics
   - Parameters:
     - `name` (string): The name of the Astro integration
 - `search-astro-docs`: Search the Astro documentation for specific topics, concepts, or features. Returns relevant documentation snippets that match your query
@@ -89,4 +89,5 @@ export default function createExampleIntegration(): AstroIntegration {
 - `get-vite-config`: Get the Vite config digest, including the root, resolve, plugins, and environment names
   - Parameters: None
 - `get-vite-module-info`: Get graph information of a module, including importers, imported modules, and compiled result
-  - Parameters: None
+  - Parameters:
+    - `filepath` (string): The absolute filepath of the module

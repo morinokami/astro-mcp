@@ -7,7 +7,7 @@ export function getAstroServerAddress(
 ) {
 	mcpServer.tool(
 		"get-astro-server-address",
-		"Get the address, family, and port of the Astro server.",
+		"Get the current network address, IP protocol family, and port number of the running Astro development server.",
 		{},
 		async () => {
 			return {
