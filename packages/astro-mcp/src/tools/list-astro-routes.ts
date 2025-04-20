@@ -8,7 +8,7 @@ export async function listAstroRoutes(
 ) {
 	mcpServer.tool(
 		"list-astro-routes",
-		"List all the routes in the Astro project. Optionally filter routes by type (redirect, page, endpoint, or fallback).",
+		"List detailed routing information from your Astro project, including all routes with their file entrypoints, URL patterns, dynamic parameters, pre-rendering status, and route types. Optionally filter by type to focus on specific route categories.",
 		{
 			type: z
 				.enum(["redirect", "page", "endpoint", "fallback"])

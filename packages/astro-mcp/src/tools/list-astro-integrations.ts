@@ -35,7 +35,7 @@ const listAstroIntegrationsCache = cache.define(
 export async function listAstroIntegrations(mcpServer: McpServer) {
 	mcpServer.tool(
 		"list-astro-integrations",
-		"List available Astro integrations.",
+		"List all Astro integrations available in the ecosystem.",
 		{},
 		async () => {
 			const integrations =
@@ -57,7 +57,7 @@ export async function listAstroIntegrations(mcpServer: McpServer) {
 export async function getAstroIntegration(mcpServer: McpServer) {
 	mcpServer.tool(
 		"get-astro-integration",
-		"Get information about an Astro integration.",
+		"Get detailed metadata about a specific Astro integration, including its name, description, categories, repository links, npm information, related website links, official status, and download statistics.",
 		{
 			name: z
 				.string()
