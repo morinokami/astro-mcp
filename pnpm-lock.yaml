@@ -52,8 +52,8 @@ catalogs:
       specifier: 3.5.0
       version: 3.5.0
     vite-plugin-mcp:
-      specifier: 0.1.1
-      version: 0.1.1
+      specifier: 0.1.2
+      version: 0.1.2
     wrangler:
       specifier: 4.11.1
       version: 4.11.1
@@ -106,7 +106,7 @@ importers:
         version: 2.2.0
       vite-plugin-mcp:
         specifier: 'catalog:'
-        version: 0.1.1(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2))
+        version: 0.1.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2))
       zod:
         specifier: 'catalog:'
         version: 3.24.2
@@ -3106,8 +3106,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite-plugin-mcp@0.1.1:
-    resolution: {integrity: sha512-1AfjKbBU68tH1K7N3azSHzn7iLXpo8zu1JXnJZkw06O4LoirYxI09WQ+BcgcpCJdUMPaMsa539Zt3Qgvwl3xzQ==}
+  vite-plugin-mcp@0.1.2:
+    resolution: {integrity: sha512-6jgCy9AcHADSdx4sCT49c95DObtcvvX0DD5yJka/nHgUuAAA9A/nEavu6rZAx7LR09eqly57tmu6xoFqPKN80A==}
     peerDependencies:
       vite: '>=6.0.0'
 
@@ -6796,7 +6796,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-mcp@0.1.1(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)):
+  vite-plugin-mcp@0.1.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)):
     dependencies:
       '@modelcontextprotocol/sdk': 1.9.0
       ansis: 3.17.0
