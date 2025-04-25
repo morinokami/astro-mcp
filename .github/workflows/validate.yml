@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run Biome check
-        run: pnpm biome check packages/astro-mcp
+      - name: Run Biome CI
+        run: pnpm biome ci packages/astro-mcp
 
       - name: Run Knip
         run: pnpm knip
