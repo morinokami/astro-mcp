@@ -3,24 +3,24 @@ packages:
   - playground
 
 catalog:
-  '@astrojs/mdx': 4.2.3
+  '@astrojs/mdx': 4.2.5
   '@astrojs/rss': 4.0.11
-  '@astrojs/sitemap': 3.3.0
+  '@astrojs/sitemap': 3.3.1
   '@biomejs/biome': 1.9.4
   '@changesets/changelog-github': 0.5.1
-  '@changesets/cli': 2.28.1
-  '@cloudflare/workers-types': 4.20250416.0
-  '@types/node': 22.14.1
-  astro: 5.6.1
+  '@changesets/cli': 2.29.2
+  '@cloudflare/workers-types': 4.20250425.0
+  '@types/node': 22.15.2
+  astro: 5.7.5
   async-cache-dedupe: 2.2.0
-  knip: 5.50.2
-  pkg-pr-new: 0.0.42
-  publint: 0.3.11
+  knip: 5.50.5
+  pkg-pr-new: 0.0.43
+  publint: 0.3.12
   typescript: 5.8.3
   unbuild: 3.5.0
-  vite-plugin-mcp: 0.1.1
-  wrangler: 4.11.1
-  zod: 3.24.2
+  vite-plugin-mcp: 0.1.2
+  wrangler: 4.13.2
+  zod: 3.24.3
 
 onlyBuiltDependencies:
   - '@biomejs/biome'
