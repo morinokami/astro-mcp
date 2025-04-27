@@ -20,14 +20,14 @@
 		"url": "https://github.com/morinokami/astro-mcp/issues"
 	},
 	"exports": {
-		".": "./dist/index.mjs"
+		".": "./dist/index.js"
 	},
-	"main": "./dist/index.mjs",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.mts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"files": ["dist"],
 	"scripts": {
-		"build": "unbuild",
+		"build": "tsdown",
 		"typecheck": "tsc --noEmit",
 		"publint": "publint"
 	},
@@ -40,8 +40,8 @@
 		"@cloudflare/workers-types": "catalog:",
 		"astro": "catalog:",
 		"publint": "catalog:",
-		"typescript": "catalog:",
-		"unbuild": "catalog:"
+		"tsdown": "catalog:",
+		"typescript": "catalog:"
 	},
 	"peerDependencies": {
 		"astro": ">=5.0.0"
