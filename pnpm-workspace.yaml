@@ -13,7 +13,7 @@ catalog:
   '@types/node': 22.15.14
   astro: 5.7.5
   async-cache-dedupe: 2.2.0
-  knip: 5.50.5
+  knip: 5.54.1
   pkg-pr-new: 0.0.43
   publint: 0.3.12
   tsdown: 0.11.0
