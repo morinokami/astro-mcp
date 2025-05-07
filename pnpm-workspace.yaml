@@ -10,13 +10,13 @@ catalog:
   '@changesets/changelog-github': 0.5.1
   '@changesets/cli': 2.29.2
   '@cloudflare/workers-types': 4.20250428.0
-  '@types/node': 22.15.2
+  '@types/node': 22.15.14
   astro: 5.7.5
   async-cache-dedupe: 2.2.0
-  knip: 5.50.5
+  knip: 5.54.1
   pkg-pr-new: 0.0.43
   publint: 0.3.12
-  tsdown: 0.9.9
+  tsdown: 0.11.0
   typescript: 5.8.3
   unbuild: 3.5.0
   vite-plugin-mcp: 0.1.2
