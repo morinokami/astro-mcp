@@ -19,17 +19,7 @@ import { searchAstroDocs } from "./tools/search-astro-docs";
 const INTEGRATION_NAME = "astro-mcp";
 const SERVER_NAME = "astro";
 
-interface AstroMcpOptions {
-	updateCursorMcpJson: boolean;
-	updateVSCodeMcpJson: boolean;
-}
-
-export default function createAstroMcpIntegration(
-	options: AstroMcpOptions = {
-		updateCursorMcpJson: true,
-		updateVSCodeMcpJson: true,
-	},
-): AstroIntegration {
+export default function createAstroMcpIntegration(): AstroIntegration {
 	const astroConfig = {} as AstroConfig;
 	const astroRoutes: IntegrationResolvedRoute[] = [];
 	const astroServerAddress = {} as AddressInfo;
@@ -48,14 +38,7 @@ export default function createAstroMcpIntegration(
 								ViteMcp({
 									printUrl: false,
 									port: config.server.port,
-									updateCursorMcpJson: {
-										enabled: options.updateCursorMcpJson,
-										serverName: SERVER_NAME,
-									},
-									updateVSCodeMcpJson: {
-										enabled: options.updateVSCodeMcpJson,
-										serverName: SERVER_NAME,
-									},
+									updateConfig: "auto",
 									mcpServerInfo: {
 										name: SERVER_NAME,
 										version,
