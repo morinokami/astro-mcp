@@ -39,6 +39,7 @@ export default function createAstroMcpIntegration(): AstroIntegration {
 									printUrl: false,
 									port: config.server.port,
 									updateConfig: "auto",
+									updateConfigServerName: SERVER_NAME,
 									mcpServerInfo: {
 										name: SERVER_NAME,
 										version,
