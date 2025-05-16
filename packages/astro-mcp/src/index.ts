@@ -20,16 +20,12 @@ const INTEGRATION_NAME = "astro-mcp";
 const SERVER_NAME = "astro";
 
 interface AstroMcpOptions {
-	updateCursorMcpJson: boolean;
-	updateVSCodeMcpJson: boolean;
+	editor?: "cursor" | "vscode" | "windsurf";
 }
 
-export default function createAstroMcpIntegration(
-	options: AstroMcpOptions = {
-		updateCursorMcpJson: true,
-		updateVSCodeMcpJson: true,
-	},
-): AstroIntegration {
+export default function createAstroMcpIntegration({
+	editor,
+}: AstroMcpOptions = {}): AstroIntegration {
 	const astroConfig = {} as AstroConfig;
 	const astroRoutes: IntegrationResolvedRoute[] = [];
 	const astroServerAddress = {} as AddressInfo;
@@ -44,18 +40,13 @@ export default function createAstroMcpIntegration(
 					Object.assign(astroConfig, config);
 					updateConfig({
 						vite: {
+							logLevel: "silent",
 							plugins: [
 								ViteMcp({
 									printUrl: false,
 									port: config.server.port,
-									updateCursorMcpJson: {
-										enabled: options.updateCursorMcpJson,
-										serverName: SERVER_NAME,
-									},
-									updateVSCodeMcpJson: {
-										enabled: options.updateVSCodeMcpJson,
-										serverName: SERVER_NAME,
-									},
+									updateConfig: editor ? [editor] : "auto",
+									updateConfigServerName: SERVER_NAME,
 									mcpServerInfo: {
 										name: SERVER_NAME,
 										version,
