@@ -1,5 +1,11 @@
 # astro-mcp
 
+## 0.3.2
+
+### Patch Changes
+
+- [#42](https://github.com/morinokami/astro-mcp/pull/42) [`51d83a6`](https://github.com/morinokami/astro-mcp/commit/51d83a6d2ff89e3e3913564bcea2c54e8d83ebc3) Thanks [@dependabot](https://github.com/apps/dependabot)! - Add Windsurf support
+
 ## 0.3.1
 
 ### Patch Changes
