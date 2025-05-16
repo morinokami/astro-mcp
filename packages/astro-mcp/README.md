@@ -41,10 +41,7 @@ export default defineConfig({
 
 ## Usage
 
-After installing the integration, the MCP server will be available at `http://localhost:4321/__mcp/sse`.
-You can use this URL to connect to the MCP server:
-
-- Create an empty `mcp.json` file in a tool-specific directory (e.g. `.vscode` for VSCode or `.cursor` for Cursor) in the project root, or an empty `mcp_config.json` file at `~/.codeium/windsurf` for Windsurf editor; `astro-mcp` will automatically update it when the Astro server starts.
+After installing the integration, the MCP server will be available at http://localhost:4321/__mcp/sse. To connect, create an empty `mcp.json` file in a tool-specific directory such as `.vscode` in your project root for VSCode or `.cursor` for Cursor, or create an empty `mcp_config.json` file at `~/.codeium/windsurf` for Windsurf. astro-mcp will automatically update the file when the Astro server starts.
 
 ### Extending the MCP server
 
