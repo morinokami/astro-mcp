@@ -10,7 +10,7 @@ catalog:
   '@changesets/changelog-github': 0.5.1
   '@changesets/cli': 2.29.4
   '@cloudflare/workers-types': 4.20250519.0
-  '@types/node': 22.15.17
+  '@types/node': 22.15.19
   astro: 5.7.13
   async-cache-dedupe: 2.2.0
   knip: 5.56.0
