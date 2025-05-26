@@ -13,7 +13,7 @@ catalog:
   "@types/node": 22.15.21
   astro: 5.8.0
   async-cache-dedupe: 2.2.0
-  knip: 5.56.0
+  knip: 5.58.0
   pkg-pr-new: 0.0.50
   publint: 0.3.12
   tsdown: 0.12.3
@@ -21,7 +21,7 @@ catalog:
   unbuild: 3.5.0
   vite-plugin-mcp: 0.2.2
   wrangler: 4.14.4
-  zod: 3.24.4
+  zod: 3.25.28
 
 onlyBuiltDependencies:
   - "@biomejs/biome"

@@ -37,8 +37,8 @@ catalogs:
       specifier: 2.2.0
       version: 2.2.0
     knip:
-      specifier: 5.56.0
-      version: 5.56.0
+      specifier: 5.58.0
+      version: 5.58.0
     pkg-pr-new:
       specifier: 0.0.50
       version: 0.0.50
@@ -58,8 +58,8 @@ catalogs:
       specifier: 4.16.1
       version: 4.16.1
     zod:
-      specifier: 3.24.4
-      version: 3.24.4
+      specifier: 3.25.28
+      version: 3.25.28
 
 importers:
 
@@ -79,7 +79,7 @@ importers:
         version: 22.15.21
       knip:
         specifier: 'catalog:'
-        version: 5.56.0(@types/node@22.15.21)(typescript@5.8.3)
+        version: 5.58.0(@types/node@22.15.21)(typescript@5.8.3)
       pkg-pr-new:
         specifier: 'catalog:'
         version: 0.0.50
@@ -109,7 +109,7 @@ importers:
         version: 0.2.2(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3))
       zod:
         specifier: 'catalog:'
-        version: 3.24.4
+        version: 3.25.28
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
@@ -146,7 +146,7 @@ importers:
         version: link:../packages/astro-mcp
       zod:
         specifier: 'catalog:'
-        version: 3.24.4
+        version: 3.25.28
 
 packages:
 
@@ -1905,8 +1905,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  knip@5.56.0:
-    resolution: {integrity: sha512-4RNCi41ax0zzl7jloxiUAcomwHIW+tj201jfr7TmHkSvb1/LkChsfXH0JOFFesVHhtSrMw6Dv4N6fmfFd4sJ0Q==}
+  knip@5.58.0:
+    resolution: {integrity: sha512-U3+ADL9mylwia7bU85CYeHSdMI7DIpaCzH37NZ8rru/dgq56iyiS0oTELhfNaCYu+TcRyuijU2YQf9o0zUGA5w==}
     engines: {node: '>=18.18.0'}
     hasBin: true
     peerDependencies:
@@ -3168,6 +3168,9 @@ packages:
   zod@3.24.4:
     resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
 
+  zod@3.25.28:
+    resolution: {integrity: sha512-/nt/67WYKnr5by3YS7LroZJbtcCBurDKKPBPWWzaxvVCGuG/NOsiKkrjoOhI8mJ+SQUXEbUzeB3S+6XDUEEj7Q==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -3235,7 +3238,7 @@ snapshots:
     dependencies:
       sitemap: 8.0.0
       stream-replace-string: 2.0.0
-      zod: 3.24.4
+      zod: 3.25.28
 
   '@astrojs/telemetry@3.3.0':
     dependencies:
@@ -3758,8 +3761,8 @@ snapshots:
       express-rate-limit: 7.5.0(express@5.1.0)
       pkce-challenge: 5.0.0
       raw-body: 3.0.0
-      zod: 3.24.4
-      zod-to-json-schema: 3.24.5(zod@3.24.4)
+      zod: 3.25.28
+      zod-to-json-schema: 3.24.5(zod@3.25.28)
     transitivePeerDependencies:
       - supports-color
 
@@ -4230,9 +4233,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
-      zod: 3.24.4
-      zod-to-json-schema: 3.24.5(zod@3.24.4)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.24.4)
+      zod: 3.25.28
+      zod-to-json-schema: 3.24.5(zod@3.25.28)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.28)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -5074,7 +5077,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@5.56.0(@types/node@22.15.21)(typescript@5.8.3):
+  knip@5.58.0(@types/node@22.15.21)(typescript@5.8.3):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       '@types/node': 22.15.21
@@ -6554,7 +6557,7 @@ snapshots:
       debug: 4.4.0
       pathe: 2.0.3
       vite: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)
-      zod: 3.24.4
+      zod: 3.25.28
     transitivePeerDependencies:
       - supports-color
 
@@ -6655,14 +6658,14 @@ snapshots:
     dependencies:
       zod: 3.24.4
 
-  zod-to-json-schema@3.24.5(zod@3.24.4):
+  zod-to-json-schema@3.24.5(zod@3.25.28):
     dependencies:
-      zod: 3.24.4
+      zod: 3.25.28
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.24.4):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.28):
     dependencies:
       typescript: 5.8.3
-      zod: 3.24.4
+      zod: 3.25.28
 
   zod-validation-error@3.4.0(zod@3.24.4):
     dependencies:
@@ -6671,5 +6674,7 @@ snapshots:
   zod@3.22.3: {}
 
   zod@3.24.4: {}
+
+  zod@3.25.28: {}
 
   zwitch@2.0.4: {}
