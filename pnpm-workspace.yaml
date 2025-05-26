@@ -3,7 +3,7 @@ packages:
   - playground
 
 catalog:
-  "@astrojs/mdx": 4.2.6
+  "@astrojs/mdx": 4.3.0
   "@astrojs/rss": 4.0.11
   "@astrojs/sitemap": 3.4.0
   "@biomejs/biome": 1.9.4
@@ -16,7 +16,7 @@ catalog:
   knip: 5.56.0
   pkg-pr-new: 0.0.50
   publint: 0.3.12
-  tsdown: 0.11.11
+  tsdown: 0.12.3
   typescript: 5.8.3
   unbuild: 3.5.0
   vite-plugin-mcp: 0.2.2
