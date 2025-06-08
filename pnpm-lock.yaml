@@ -28,8 +28,8 @@ catalogs:
       specifier: 4.20250525.0
       version: 4.20250525.0
     '@types/node':
-      specifier: 22.15.21
-      version: 22.15.21
+      specifier: 22.15.30
+      version: 22.15.30
     astro:
       specifier: 5.8.0
       version: 5.8.0
@@ -76,10 +76,10 @@ importers:
         version: 2.29.4
       '@types/node':
         specifier: 'catalog:'
-        version: 22.15.21
+        version: 22.15.30
       knip:
         specifier: 'catalog:'
-        version: 5.58.0(@types/node@22.15.21)(typescript@5.8.3)
+        version: 5.58.0(@types/node@22.15.30)(typescript@5.8.3)
       pkg-pr-new:
         specifier: 'catalog:'
         version: 0.0.50
@@ -106,7 +106,7 @@ importers:
         version: 2.2.0
       vite-plugin-mcp:
         specifier: 'catalog:'
-        version: 0.2.2(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3))
+        version: 0.2.2(vite@6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3))
       zod:
         specifier: 'catalog:'
         version: 3.25.28
@@ -116,7 +116,7 @@ importers:
         version: 4.20250525.0
       astro:
         specifier: 'catalog:'
-        version: 5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
+        version: 5.8.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
       publint:
         specifier: 'catalog:'
         version: 0.3.12
@@ -131,7 +131,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 'catalog:'
-        version: 4.3.0(astro@5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))
+        version: 4.3.0(astro@5.8.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))
       '@astrojs/rss':
         specifier: 'catalog:'
         version: 4.0.11
@@ -140,7 +140,7 @@ importers:
         version: 3.4.0
       astro:
         specifier: 'catalog:'
-        version: 5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
+        version: 5.8.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
       astro-mcp:
         specifier: workspace:*
         version: link:../packages/astro-mcp
@@ -1063,11 +1063,11 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@22.15.19':
-    resolution: {integrity: sha512-3vMNr4TzNQyjHcRZadojpRaD9Ofr6LsonZAoQ+HMUa/9ORTPoxVIw0e0mpqWpdjj8xybyCM+oKOUH2vwFu/oEw==}
+  '@types/node@22.15.29':
+    resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
 
-  '@types/node@22.15.21':
-    resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
+  '@types/node@22.15.30':
+    resolution: {integrity: sha512-6Q7lr06bEHdlfplU6YRbgG1SFBdlsfNC4/lX+SkhiTs0cpJkOElmWls8PxDFv4yY/xKb8Y6SO0OmSX4wgqTZbA==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -3206,12 +3206,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))':
+  '@astrojs/mdx@4.3.0(astro@5.8.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
+      astro: 5.8.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -4072,7 +4072,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.29
 
   '@types/hast@3.0.4':
     dependencies:
@@ -4094,17 +4094,17 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@22.15.19':
+  '@types/node@22.15.29':
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.15.21':
+  '@types/node@22.15.30':
     dependencies:
       undici-types: 6.21.0
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.29
 
   '@types/unist@2.0.11': {}
 
@@ -4173,7 +4173,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3):
+  astro@5.8.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
@@ -4228,8 +4228,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)
-      vitefu: 1.0.6(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3))
+      vite: 6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)
+      vitefu: 1.0.6(vite@6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -5077,10 +5077,10 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@5.58.0(@types/node@22.15.21)(typescript@5.8.3):
+  knip@5.58.0(@types/node@22.15.30)(typescript@5.8.3):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
-      '@types/node': 22.15.21
+      '@types/node': 22.15.30
       fast-glob: 3.3.3
       formatly: 0.2.3
       jiti: 2.4.2
@@ -6550,18 +6550,18 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-mcp@0.2.2(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)):
+  vite-plugin-mcp@0.2.2(vite@6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)):
     dependencies:
       '@modelcontextprotocol/sdk': 1.11.2
       ansis: 3.17.0
       debug: 4.4.0
       pathe: 2.0.3
-      vite: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)
+      vite: 6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)
       zod: 3.25.28
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3):
+  vite@6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3):
     dependencies:
       esbuild: 0.25.4
       fdir: 6.4.4(picomatch@4.0.2)
@@ -6570,14 +6570,14 @@ snapshots:
       rollup: 4.40.0
       tinyglobby: 0.2.13
     optionalDependencies:
-      '@types/node': 22.15.21
+      '@types/node': 22.15.30
       fsevents: 2.3.3
       jiti: 2.4.2
       lightningcss: 1.29.3
 
-  vitefu@1.0.6(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)):
+  vitefu@1.0.6(vite@6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)):
     optionalDependencies:
-      vite: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.29.3)
+      vite: 6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)
 
   walk-up-path@3.0.1: {}
 
