@@ -25,8 +25,8 @@ catalogs:
       specifier: 2.29.4
       version: 2.29.4
     '@cloudflare/workers-types':
-      specifier: 4.20250525.0
-      version: 4.20250525.0
+      specifier: 4.20250607.0
+      version: 4.20250607.0
     '@types/node':
       specifier: 22.15.30
       version: 22.15.30
@@ -58,8 +58,8 @@ catalogs:
       specifier: 4.16.1
       version: 4.16.1
     zod:
-      specifier: 3.25.28
-      version: 3.25.28
+      specifier: 3.25.56
+      version: 3.25.56
 
 importers:
 
@@ -91,13 +91,13 @@ importers:
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
-        version: 4.20250525.0
+        version: 4.20250607.0
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
       wrangler:
         specifier: 'catalog:'
-        version: 4.16.1(@cloudflare/workers-types@4.20250525.0)
+        version: 4.16.1(@cloudflare/workers-types@4.20250607.0)
 
   packages/astro-mcp:
     dependencies:
@@ -109,11 +109,11 @@ importers:
         version: 0.2.2(vite@6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3))
       zod:
         specifier: 'catalog:'
-        version: 3.25.28
+        version: 3.25.56
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
-        version: 4.20250525.0
+        version: 4.20250607.0
       astro:
         specifier: 'catalog:'
         version: 5.9.1(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
@@ -146,7 +146,7 @@ importers:
         version: link:../packages/astro-mcp
       zod:
         specifier: 'catalog:'
-        version: 3.25.28
+        version: 3.25.56
 
 packages:
 
@@ -364,8 +364,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20250525.0':
-    resolution: {integrity: sha512-3loeNVJkcDLb9giarUIHmDgvh+/4RtH+R/rHn4BCmME1qKdu73n/hvECYhH8BabCZplF8zQy1wok1MKwXEWC/A==}
+  '@cloudflare/workers-types@4.20250607.0':
+    resolution: {integrity: sha512-OYmKNzC2eQy6CNj+j0go8Ut3SezjsprCgJyEaBzJql+473WAN9ndVnNZy9lj/tTyLV6wzpQkZWmRAKGDmacvkg==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -3247,6 +3247,9 @@ packages:
   zod@3.25.28:
     resolution: {integrity: sha512-/nt/67WYKnr5by3YS7LroZJbtcCBurDKKPBPWWzaxvVCGuG/NOsiKkrjoOhI8mJ+SQUXEbUzeB3S+6XDUEEj7Q==}
 
+  zod@3.25.56:
+    resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -3314,7 +3317,7 @@ snapshots:
     dependencies:
       sitemap: 8.0.0
       stream-replace-string: 2.0.0
-      zod: 3.25.28
+      zod: 3.25.56
 
   '@astrojs/telemetry@3.3.0':
     dependencies:
@@ -3578,7 +3581,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20250508.0':
     optional: true
 
-  '@cloudflare/workers-types@4.20250525.0': {}
+  '@cloudflare/workers-types@4.20250607.0': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -3842,8 +3845,8 @@ snapshots:
       express-rate-limit: 7.5.0(express@5.1.0)
       pkce-challenge: 5.0.0
       raw-body: 3.0.0
-      zod: 3.25.28
-      zod-to-json-schema: 3.24.5(zod@3.25.28)
+      zod: 3.25.56
+      zod-to-json-schema: 3.24.5(zod@3.25.56)
     transitivePeerDependencies:
       - supports-color
 
@@ -4362,9 +4365,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
-      zod: 3.25.28
-      zod-to-json-schema: 3.24.5(zod@3.25.28)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.28)
+      zod: 3.25.56
+      zod-to-json-schema: 3.24.5(zod@3.25.56)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.56)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -6705,7 +6708,7 @@ snapshots:
       debug: 4.4.0
       pathe: 2.0.3
       vite: 6.3.5(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)
-      zod: 3.25.28
+      zod: 3.25.56
     transitivePeerDependencies:
       - supports-color
 
@@ -6756,7 +6759,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20250508.0
       '@cloudflare/workerd-windows-64': 1.20250508.0
 
-  wrangler@4.16.1(@cloudflare/workers-types@4.20250525.0):
+  wrangler@4.16.1(@cloudflare/workers-types@4.20250607.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.3.2(unenv@2.0.0-rc.17)(workerd@1.20250508.0)
@@ -6767,7 +6770,7 @@ snapshots:
       unenv: 2.0.0-rc.17
       workerd: 1.20250508.0
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20250525.0
+      '@cloudflare/workers-types': 4.20250607.0
       fsevents: 2.3.3
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -6806,14 +6809,14 @@ snapshots:
     dependencies:
       zod: 3.25.28
 
-  zod-to-json-schema@3.24.5(zod@3.25.28):
+  zod-to-json-schema@3.24.5(zod@3.25.56):
     dependencies:
-      zod: 3.25.28
+      zod: 3.25.56
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.28):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.56):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.28
+      zod: 3.25.56
 
   zod-validation-error@3.4.0(zod@3.25.28):
     dependencies:
@@ -6822,5 +6825,7 @@ snapshots:
   zod@3.22.3: {}
 
   zod@3.25.28: {}
+
+  zod@3.25.56: {}
 
   zwitch@2.0.4: {}
