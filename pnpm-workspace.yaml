@@ -9,7 +9,7 @@ catalog:
   "@biomejs/biome": 1.9.4
   "@changesets/changelog-github": 0.5.1
   "@changesets/cli": 2.29.4
-  "@cloudflare/workers-types": 4.20250525.0
+  "@cloudflare/workers-types": 4.20250607.0
   "@types/node": 22.15.30
   astro: 5.9.1
   async-cache-dedupe: 2.2.0
