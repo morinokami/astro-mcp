@@ -4,7 +4,7 @@ packages:
 
 catalog:
   "@astrojs/mdx": 4.3.0
-  "@astrojs/rss": 4.0.11
+  "@astrojs/rss": 4.0.12
   "@astrojs/sitemap": 3.4.0
   "@biomejs/biome": 1.9.4
   "@changesets/changelog-github": 0.5.1
