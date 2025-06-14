@@ -1,5 +1,11 @@
 # astro-mcp
 
+## 0.4.0
+
+### Minor Changes
+
+- [#75](https://github.com/morinokami/astro-mcp/pull/75) [`686b23e`](https://github.com/morinokami/astro-mcp/commit/686b23e5db4869deebbc6f91007dee97dad89407) Thanks [@morinokami](https://github.com/morinokami)! - Add get-astro-changes tool
+
 ## 0.3.2
 
 ### Patch Changes
