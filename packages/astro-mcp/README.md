@@ -41,7 +41,7 @@ export default defineConfig({
 
 ## Usage
 
-After installing the integration, the MCP server will be available at http://localhost:4321/__mcp/sse. To connect, create an empty `mcp.json` file in a tool-specific directory such as `.vscode` in your project root for VSCode or `.cursor` for Cursor, or create an empty `mcp_config.json` file at `~/.codeium/windsurf` for Windsurf. astro-mcp will automatically update the file when the Astro server starts.
+After installing the integration, the MCP server will be available at http://localhost:4321/\_\_mcp/sse. To connect, create an empty `mcp.json` file in a tool-specific directory such as `.vscode` in your project root for VSCode or `.cursor` for Cursor, or create an empty `mcp_config.json` file at `~/.codeium/windsurf` for Windsurf. astro-mcp will automatically update the file when the Astro server starts.
 
 ### Extending the MCP server
 
@@ -75,10 +75,13 @@ export default function createExampleIntegration(): AstroIntegration {
   - Parameters: None
 - `get-astro-integration`: Get detailed metadata about a specific Astro integration, including its name, description, categories, repository links, npm information, related website links, official status, and download statistics
   - Parameters:
-    - `name` (string): The name of the Astro integration
+    - `name` (string): The name of the Astro integration to get information about
 - `search-astro-docs`: Search the Astro documentation for specific topics, concepts, or features. Returns relevant documentation snippets that match your query
   - Parameters:
     - `query` (string): The query to search for
+- `get-astro-changes`: Get the changelog of the Astro-related packages
+  - Parameters:
+    - `packageName` (string): The name of the Astro-related package to get the changelog for
 
 ### Tools from `vite-plugin-mcp`
 

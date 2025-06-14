@@ -7,6 +7,7 @@ import type {
 import { type McpServer, ViteMcp } from "vite-plugin-mcp";
 
 import { version } from "../package.json";
+import { getAstroChanges } from "./tools/get-astro-changes";
 import { getAstroConfig } from "./tools/get-astro-config";
 import { getAstroServerAddress } from "./tools/get-astro-server-address";
 import {
@@ -59,6 +60,7 @@ export default function createAstroMcpIntegration({
 										listAstroIntegrations(mcpServer);
 										getAstroIntegration(mcpServer);
 										searchAstroDocs(mcpServer);
+										getAstroChanges(mcpServer);
 									},
 								}),
 							],
