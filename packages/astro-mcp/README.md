@@ -75,10 +75,13 @@ export default function createExampleIntegration(): AstroIntegration {
   - Parameters: None
 - `get-astro-integration`: Get detailed metadata about a specific Astro integration, including its name, description, categories, repository links, npm information, related website links, official status, and download statistics
   - Parameters:
-    - `name` (string): The name of the Astro integration
+    - `name` (string): The name of the Astro integration to get information about
 - `search-astro-docs`: Search the Astro documentation for specific topics, concepts, or features. Returns relevant documentation snippets that match your query
   - Parameters:
     - `query` (string): The query to search for
+- `get-astro-changes`: Get the changelog of the Astro-related packages
+  - Parameters:
+    - `packageName` (string): The name of the Astro-related package to get the changelog for
 
 ### Tools from `vite-plugin-mcp`
 

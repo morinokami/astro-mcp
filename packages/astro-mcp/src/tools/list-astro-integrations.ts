@@ -61,7 +61,7 @@ export async function getAstroIntegration(mcpServer: McpServer) {
 		{
 			name: z
 				.string()
-				.describe("Name of the Astro integration to get information about"),
+				.describe("The name of the Astro integration to get information about"),
 		},
 		async ({ name }) => {
 			const integrations =
