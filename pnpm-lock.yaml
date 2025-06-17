@@ -58,8 +58,8 @@ catalogs:
       specifier: 4.20.0
       version: 4.20.0
     zod:
-      specifier: 3.25.56
-      version: 3.25.56
+      specifier: 3.25.67
+      version: 3.25.67
 
 importers:
 
@@ -109,7 +109,7 @@ importers:
         version: 0.2.2(vite@6.3.5(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3))
       zod:
         specifier: 'catalog:'
-        version: 3.25.56
+        version: 3.25.67
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
@@ -146,7 +146,7 @@ importers:
         version: link:../packages/astro-mcp
       zod:
         specifier: 'catalog:'
-        version: 3.25.56
+        version: 3.25.67
 
 packages:
 
@@ -3192,11 +3192,11 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@3.25.28:
-    resolution: {integrity: sha512-/nt/67WYKnr5by3YS7LroZJbtcCBurDKKPBPWWzaxvVCGuG/NOsiKkrjoOhI8mJ+SQUXEbUzeB3S+6XDUEEj7Q==}
-
   zod@3.25.56:
     resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
+
+  zod@3.25.67:
+    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -3265,7 +3265,7 @@ snapshots:
     dependencies:
       sitemap: 8.0.0
       stream-replace-string: 2.0.0
-      zod: 3.25.56
+      zod: 3.25.67
 
   '@astrojs/telemetry@3.3.0':
     dependencies:
@@ -3802,8 +3802,8 @@ snapshots:
       express-rate-limit: 7.5.0(express@5.1.0)
       pkce-challenge: 5.0.0
       raw-body: 3.0.0
-      zod: 3.25.56
-      zod-to-json-schema: 3.24.5(zod@3.25.56)
+      zod: 3.25.67
+      zod-to-json-schema: 3.24.5(zod@3.25.67)
     transitivePeerDependencies:
       - supports-color
 
@@ -4274,9 +4274,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
-      zod: 3.25.56
-      zod-to-json-schema: 3.24.5(zod@3.25.56)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.56)
+      zod: 3.25.67
+      zod-to-json-schema: 3.24.5(zod@3.25.67)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.67)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -5133,8 +5133,8 @@ snapshots:
       smol-toml: 1.3.4
       strip-json-comments: 5.0.2
       typescript: 5.8.3
-      zod: 3.25.28
-      zod-validation-error: 3.4.0(zod@3.25.28)
+      zod: 3.25.56
+      zod-validation-error: 3.4.0(zod@3.25.56)
 
   lightningcss-darwin-arm64@1.29.3:
     optional: true
@@ -6606,7 +6606,7 @@ snapshots:
       debug: 4.4.0
       pathe: 2.0.3
       vite: 6.3.5(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3)
-      zod: 3.25.56
+      zod: 3.25.67
     transitivePeerDependencies:
       - supports-color
 
@@ -6706,23 +6706,23 @@ snapshots:
     dependencies:
       zod: 3.25.56
 
-  zod-to-json-schema@3.24.5(zod@3.25.56):
+  zod-to-json-schema@3.24.5(zod@3.25.67):
     dependencies:
-      zod: 3.25.56
+      zod: 3.25.67
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.56):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.67):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.56
+      zod: 3.25.67
 
-  zod-validation-error@3.4.0(zod@3.25.28):
+  zod-validation-error@3.4.0(zod@3.25.56):
     dependencies:
-      zod: 3.25.28
+      zod: 3.25.56
 
   zod@3.22.3: {}
 
-  zod@3.25.28: {}
-
   zod@3.25.56: {}
+
+  zod@3.25.67: {}
 
   zwitch@2.0.4: {}
