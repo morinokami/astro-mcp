@@ -37,8 +37,8 @@ catalogs:
       specifier: 2.2.0
       version: 2.2.0
     knip:
-      specifier: 5.60.2
-      version: 5.60.2
+      specifier: 5.61.1
+      version: 5.61.1
     pkg-pr-new:
       specifier: 0.0.51
       version: 0.0.51
@@ -79,7 +79,7 @@ importers:
         version: 22.15.31
       knip:
         specifier: 'catalog:'
-        version: 5.60.2(@types/node@22.15.31)(typescript@5.8.3)
+        version: 5.61.1(@types/node@22.15.31)(typescript@5.8.3)
       pkg-pr-new:
         specifier: 'catalog:'
         version: 0.0.51
@@ -1917,8 +1917,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  knip@5.60.2:
-    resolution: {integrity: sha512-TsYqEsoL3802RmhGL5MN7RLI6/03kocMYx/4BpMmwo3dSwEJxmzV7HqRxMVZr6c1llbd25+MqjgA86bv1IwsPA==}
+  knip@5.61.1:
+    resolution: {integrity: sha512-keywAzpu8R9S50JRT3qxilb1i/pv3ztBHhZ3tRuHvRclqfhfPkY7kb/G6l4q7zozbyndidSr7IScvayG76HtkA==}
     engines: {node: '>=18.18.0'}
     hasBin: true
     peerDependencies:
@@ -5118,7 +5118,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@5.60.2(@types/node@22.15.31)(typescript@5.8.3):
+  knip@5.61.1(@types/node@22.15.31)(typescript@5.8.3):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       '@types/node': 22.15.31
