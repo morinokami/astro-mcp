@@ -25,8 +25,8 @@ catalogs:
       specifier: 2.29.4
       version: 2.29.4
     '@cloudflare/workers-types':
-      specifier: 4.20250607.0
-      version: 4.20250607.0
+      specifier: 4.20250617.0
+      version: 4.20250617.0
     '@types/node':
       specifier: 22.15.31
       version: 22.15.31
@@ -91,13 +91,13 @@ importers:
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
-        version: 4.20250607.0
+        version: 4.20250617.0
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
       wrangler:
         specifier: 'catalog:'
-        version: 4.20.0(@cloudflare/workers-types@4.20250607.0)
+        version: 4.20.0(@cloudflare/workers-types@4.20250617.0)
 
   packages/astro-mcp:
     dependencies:
@@ -113,7 +113,7 @@ importers:
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
-        version: 4.20250607.0
+        version: 4.20250617.0
       astro:
         specifier: 'catalog:'
         version: 5.9.1(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
@@ -373,8 +373,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20250607.0':
-    resolution: {integrity: sha512-OYmKNzC2eQy6CNj+j0go8Ut3SezjsprCgJyEaBzJql+473WAN9ndVnNZy9lj/tTyLV6wzpQkZWmRAKGDmacvkg==}
+  '@cloudflare/workers-types@4.20250617.0':
+    resolution: {integrity: sha512-oUJWWKCR9bLgb7ymvM1V3Q//OpMR7jG4etCJs45bRdidmAgCog+y8w8fpuvh27JS4B8KzFNWB0YUD9xBPIf5Qg==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -3538,7 +3538,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20250604.0':
     optional: true
 
-  '@cloudflare/workers-types@4.20250607.0': {}
+  '@cloudflare/workers-types@4.20250617.0': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -6657,7 +6657,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20250604.0
       '@cloudflare/workerd-windows-64': 1.20250604.0
 
-  wrangler@4.20.0(@cloudflare/workers-types@4.20250607.0):
+  wrangler@4.20.0(@cloudflare/workers-types@4.20250617.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.3.2(unenv@2.0.0-rc.17)(workerd@1.20250604.0)
@@ -6668,7 +6668,7 @@ snapshots:
       unenv: 2.0.0-rc.17
       workerd: 1.20250604.0
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20250607.0
+      '@cloudflare/workers-types': 4.20250617.0
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
