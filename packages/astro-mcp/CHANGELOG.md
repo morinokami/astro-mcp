@@ -1,5 +1,11 @@
 # astro-mcp
 
+## 0.4.1
+
+### Patch Changes
+
+- [#83](https://github.com/morinokami/astro-mcp/pull/83) [`118df14`](https://github.com/morinokami/astro-mcp/commit/118df1472463e57ae843c032290ba314667d85c8) Thanks [@morinokami](https://github.com/morinokami)! - Add Claude Code support
+
 ## 0.4.0
 
 ### Minor Changes
