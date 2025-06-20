@@ -52,8 +52,8 @@ catalogs:
       specifier: 5.8.3
       version: 5.8.3
     vite-plugin-mcp:
-      specifier: 0.2.2
-      version: 0.2.2
+      specifier: 0.2.3
+      version: 0.2.3
     wrangler:
       specifier: 4.20.0
       version: 4.20.0
@@ -106,7 +106,7 @@ importers:
         version: 2.2.0
       vite-plugin-mcp:
         specifier: 'catalog:'
-        version: 0.2.2(vite@6.3.5(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3))
+        version: 0.2.3(vite@6.3.5(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3))
       zod:
         specifier: 'catalog:'
         version: 3.25.67
@@ -673,8 +673,8 @@ packages:
   '@mdx-js/mdx@3.1.0':
     resolution: {integrity: sha512-/QxEhPAvGwbQmy1Px8F899L5Uc2KZ6JtXwlCgJmjSTBedwOZkByYcBG4GceIGPXRDsmfxhHazuS+hlOShRLeDw==}
 
-  '@modelcontextprotocol/sdk@1.11.2':
-    resolution: {integrity: sha512-H9vwztj5OAqHg9GockCQC06k1natgcxWQSRpQcPJf6i5+MWBzfKkRtxGbjQf0X2ihii0ffLZCRGbYV2f2bjNCQ==}
+  '@modelcontextprotocol/sdk@1.13.0':
+    resolution: {integrity: sha512-P5FZsXU0kY881F6Hbk9GhsYx02/KgWK1DYf7/tyE/1lcFKhDYPQR9iYjhQXJn+Sg6hQleMo3DB7h7+p4wgp2Lw==}
     engines: {node: '>=18'}
 
   '@napi-rs/wasm-runtime@0.2.11':
@@ -1104,6 +1104,9 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  ajv@6.12.6:
+    resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
+
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
 
@@ -1365,15 +1368,6 @@ packages:
   dataloader@1.4.0:
     resolution: {integrity: sha512-68s5jYdlvasItOJnCuI2Q9s4q98g0pCyL3HrcKJu8KNugUl8ahgmZYg38ysLTgQjjXX3H8CJLkAvWrclWfcalw==}
 
-  debug@4.4.0:
-    resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
     engines: {node: '>=6.0'}
@@ -1602,6 +1596,9 @@ packages:
   fast-glob@3.3.3:
     resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
+
+  fast-json-stable-stringify@2.1.0:
+    resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
 
   fast-xml-parser@5.2.5:
     resolution: {integrity: sha512-pfX9uG9Ki0yekDHx2SiuRIyFdyAr1kMIMitPvb0YBo8SUfKvia7w7FIyd/l6av85pFYRhZscS75MwMnbvY+hcQ==}
@@ -1893,6 +1890,9 @@ packages:
     resolution: {integrity: sha512-/sM3dO2FOzXjKQhJuo0Q173wf2KOo8t4I8vHy6lF9poUp7bKT0/NHE8fPX23PwfhnykfqnC2xRxOnVw5XuGIaA==}
     engines: {node: '>=6'}
     hasBin: true
+
+  json-schema-traverse@0.4.1:
+    resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
 
   jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
@@ -2435,6 +2435,10 @@ packages:
     resolution: {integrity: sha512-1w3MMtL9iotBjm1mmXtG3Nk06wnq9UhGNRpQ2j6n1Zq7YAD6gnxMMZMIxlRPAydVjVbjSm+n0lhwqsD1m4LD5w==}
     engines: {node: '>=18'}
     hasBin: true
+
+  punycode@2.3.1:
+    resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
+    engines: {node: '>=6'}
 
   qs@6.14.0:
     resolution: {integrity: sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==}
@@ -2991,6 +2995,9 @@ packages:
       uploadthing:
         optional: true
 
+  uri-js@4.4.1:
+    resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
   url-join@5.0.0:
     resolution: {integrity: sha512-n2huDr9h9yzd6exQVnH/jU5mr+Pfx08LRXXZhkLLetAMESRj+anQsTAh940iMrIetKAmry9coFuZQ2jY8/p3WA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3012,8 +3019,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite-plugin-mcp@0.2.2:
-    resolution: {integrity: sha512-bFIAPqKfBMNDPY7RiMuX9P+FbdBh6bOxuvYiF048PkqR5Vf0xiJ4WJnxaDHfUzsdZV/bJANud2qWbmwA/Pjrhw==}
+  vite-plugin-mcp@0.2.3:
+    resolution: {integrity: sha512-eU0NEISi15TpRCSbBatp95d4T9/TvsiDNT0NSV6Eq5b6rs4N2YHx3YpfKsleLgleNRDHVdtnGa11G2YSJbvxmw==}
     peerDependencies:
       vite: '>=6.0.0'
 
@@ -3757,8 +3764,9 @@ snapshots:
       - acorn
       - supports-color
 
-  '@modelcontextprotocol/sdk@1.11.2':
+  '@modelcontextprotocol/sdk@1.13.0':
     dependencies:
+      ajv: 6.12.6
       content-type: 1.0.5
       cors: 2.8.5
       cross-spawn: 7.0.6
@@ -4133,6 +4141,13 @@ snapshots:
 
   acorn@8.14.1: {}
 
+  ajv@6.12.6:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-json-stable-stringify: 2.1.0
+      json-schema-traverse: 0.4.1
+      uri-js: 4.4.1
+
   ansi-align@3.0.1:
     dependencies:
       string-width: 4.2.3
@@ -4453,10 +4468,6 @@ snapshots:
 
   dataloader@1.4.0: {}
 
-  debug@4.4.0:
-    dependencies:
-      ms: 2.1.3
-
   debug@4.4.1:
     dependencies:
       ms: 2.1.3
@@ -4698,6 +4709,8 @@ snapshots:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.8
+
+  fast-json-stable-stringify@2.1.0: {}
 
   fast-xml-parser@5.2.5:
     dependencies:
@@ -5074,6 +5087,8 @@ snapshots:
       argparse: 2.0.1
 
   jsesc@3.1.0: {}
+
+  json-schema-traverse@0.4.1: {}
 
   jsonfile@4.0.0:
     optionalDependencies:
@@ -5868,6 +5883,8 @@ snapshots:
       picocolors: 1.1.1
       sade: 1.8.1
 
+  punycode@2.3.1: {}
+
   qs@6.14.0:
     dependencies:
       side-channel: 1.1.0
@@ -6539,6 +6556,10 @@ snapshots:
       ofetch: 1.4.1
       ufo: 1.6.1
 
+  uri-js@4.4.1:
+    dependencies:
+      punycode: 2.3.1
+
   url-join@5.0.0: {}
 
   validate-npm-package-name@5.0.1: {}
@@ -6560,11 +6581,11 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-mcp@0.2.2(vite@6.3.5(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3)):
+  vite-plugin-mcp@0.2.3(vite@6.3.5(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3)):
     dependencies:
-      '@modelcontextprotocol/sdk': 1.11.2
+      '@modelcontextprotocol/sdk': 1.13.0
       ansis: 3.17.0
-      debug: 4.4.0
+      debug: 4.4.1
       pathe: 2.0.3
       vite: 6.3.5(@types/node@22.15.31)(jiti@2.4.2)(lightningcss@1.29.3)
       zod: 3.25.67
