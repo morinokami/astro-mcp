@@ -186,13 +186,17 @@ export async function startAstroCourse(mcpServer: McpServer) {
 						(step) => step.status === "in-progress",
 					);
 
-					const content = await loadStepContent(
-						currentLesson.title,
-						currentLesson.steps[currentStepIndex].title,
-					);
-
-					if (content) {
-						return { content: [{ type: "text", text: wrapContent(content) }] };
+					if (currentStepIndex !== -1) {
+						// Resume from the last in-progress step
+						const content = await loadStepContent(
+							currentLesson.title,
+							currentLesson.steps[currentStepIndex].title,
+						);
+						if (content) {
+							return {
+								content: [{ type: "text", text: wrapContent(content) }],
+							};
+						}
 					}
 
 					return {
@@ -205,6 +209,7 @@ export async function startAstroCourse(mcpServer: McpServer) {
 					};
 				}
 
+				// Start from the beginning
 				await saveCourseProgress({
 					currentLesson: 0,
 					lessons,
