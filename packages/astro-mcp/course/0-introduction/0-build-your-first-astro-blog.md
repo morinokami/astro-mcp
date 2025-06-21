@@ -1,3 +1,5 @@
+# Build your first Astro Blog
+
 In this course, you'll learn Astro's key features by building a fully-functioning blog, from zero to full launch! 🚀
 
 Along the way, you'll:

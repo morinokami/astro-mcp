@@ -15,11 +15,15 @@
 			]
 		},
 		{
-			"title": "1-setup",
+			"title": "1-create-and-deploy-your-first-astro-site",
 			"status": "not-started",
 			"steps": [
 				{
-					"title": "0-create-and-deploy-your-first-astro-site",
+					"title": "0-setup",
+					"status": "not-started"
+				},
+				{
+					"title": "1-prepare-your-dev-environment",
 					"status": "not-started"
 				}
 			]
