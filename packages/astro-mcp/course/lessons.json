@@ -1,0 +1,28 @@
+{
+	"lessons": [
+		{
+			"title": "0-introduction",
+			"status": "not-started",
+			"steps": [
+				{
+					"title": "0-build-your-first-astro-blog",
+					"status": "not-started"
+				},
+				{
+					"title": "1-about-this-course",
+					"status": "not-started"
+				}
+			]
+		},
+		{
+			"title": "1-setup",
+			"status": "not-started",
+			"steps": [
+				{
+					"title": "0-create-and-deploy-your-first-astro-site",
+					"status": "not-started"
+				}
+			]
+		}
+	]
+}
