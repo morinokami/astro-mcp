@@ -18,6 +18,7 @@ import { listAstroRoutes } from "./tools/list-astro-routes";
 import { searchAstroDocs } from "./tools/search-astro-docs";
 import {
 	clearAstroCourseProgress,
+	getAstroCourseProgress,
 	nextAstroCourseStep,
 	startAstroCourse,
 } from "./tools/start-astro-course";
@@ -68,6 +69,7 @@ export default function createAstroMcpIntegration({
 										getAstroChanges(mcpServer);
 										startAstroCourse(mcpServer);
 										nextAstroCourseStep(mcpServer);
+										getAstroCourseProgress(mcpServer);
 										clearAstroCourseProgress(mcpServer);
 									},
 								}),

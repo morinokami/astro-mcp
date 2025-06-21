@@ -27,7 +27,7 @@ The following is the introduction content, please provide this text to the user 
 
 # Welcome to the Astro Course!
 
-Thank you for joining the Astro course! This course will guide you through the basics of Astro, starting from the very beginning.
+Thank you for starting the Astro course! This course will guide you through the basics of Astro, starting from the very beginning.
 
 ## ## How This Course Works
 
@@ -39,7 +39,7 @@ Thank you for joining the Astro course! This course will guide you through the b
 - Use the \`getAstroCourseProgress\` tool to check your progress. You can just ask "get my course progress".
 - Use the \`clearAstroCourseHistory\` tool to reset your progress and start over. You can just ask "clear my course progress".
 
-Type "start astro course" to start the course.`;
+Type "next step" to start the course.`;
 
 function wrapContent(content: string) {
 	return `This is a course designed to help users learn Astro, the web framework for building content-driven websites such as blogs, marketing sites, and e-commerce platforms.
@@ -176,25 +176,50 @@ export async function startAstroCourse(mcpServer: McpServer) {
 		"Start the Astro course. If the user has no progress, start from the beginning. If the user has progress, resume from the last lesson.",
 		{},
 		async () => {
-			const lessons = await loadLessons();
-			const progress = await loadCourseProgress();
+			try {
+				const lessons = await loadLessons();
+				const progress = await loadCourseProgress();
 
-			if (progress) {
+				if (progress) {
+					const currentLesson = progress.lessons[progress.currentLesson];
+					const currentStepIndex = currentLesson.steps.findLastIndex(
+						(step) => step.status === "in-progress",
+					);
+
+					const content = await loadStepContent(
+						currentLesson.title,
+						currentLesson.steps[currentStepIndex].title,
+					);
+
+					if (content) {
+						return { content: [{ type: "text", text: wrapContent(content) }] };
+					}
+
+					return {
+						content: [
+							{
+								type: "text",
+								text: "Use the `nextAstroCourseStep` tool to resume the course.",
+							},
+						],
+					};
+				}
+
+				await saveCourseProgress({
+					currentLesson: 0,
+					lessons,
+				});
+				return { content: [{ type: "text", text: introPrompt }] };
+			} catch (error) {
 				return {
 					content: [
 						{
 							type: "text",
-							text: "Use the `nextAstroCourseStep` tool to resume the course.",
+							text: `Error starting the course: ${error instanceof Error ? error.message : String(error)}`,
 						},
 					],
 				};
 			}
-
-			await saveCourseProgress({
-				currentLesson: 0,
-				lessons,
-			});
-			return { content: [{ type: "text", text: introPrompt }] };
 		},
 	);
 }
@@ -205,28 +230,31 @@ export async function nextAstroCourseStep(mcpServer: McpServer) {
 		"Proceed to the next step in the Astro course.",
 		{},
 		async () => {
-			const progress = await loadCourseProgress();
+			try {
+				const progress = await loadCourseProgress();
 
-			if (progress) {
-				try {
+				if (progress) {
 					return await advanceStep(progress);
-				} catch (_) {
-					return {
-						content: [
-							{ type: "text", text: "TODO: No more lessons available." },
-						],
-					};
 				}
-			}
 
-			return {
-				content: [
-					{
-						type: "text",
-						text: "Use the `startAstroCourse` tool to start the course.",
-					},
-				],
-			};
+				return {
+					content: [
+						{
+							type: "text",
+							text: "Use the `startAstroCourse` tool to start the course.",
+						},
+					],
+				};
+			} catch (error) {
+				return {
+					content: [
+						{
+							type: "text",
+							text: `Error starting the course: ${error instanceof Error ? error.message : String(error)}`,
+						},
+					],
+				};
+			}
 		},
 	);
 }
@@ -234,10 +262,61 @@ export async function nextAstroCourseStep(mcpServer: McpServer) {
 export async function getAstroCourseProgress(mcpServer: McpServer) {
 	mcpServer.tool(
 		"get-astro-course-progress",
-		"TODO: Get the current progress of the Astro course",
+		"Get the current progress of the Astro course.",
 		{},
 		async () => {
-			return { content: [{ type: "text", text: "" }] };
+			try {
+				const progress = await loadCourseProgress();
+
+				if (!progress) {
+					return {
+						content: [{ type: "text", text: "No course progress found." }],
+					};
+				}
+
+				let progressReport = "# Astro Course Progress\n\n";
+
+				const totalLessons = progress.lessons.length;
+				const completedLessons = progress.lessons.filter(
+					(lesson) => lesson.status === "completed",
+				).length;
+				const completedSteps = progress.lessons.reduce((acc, lesson) => {
+					return (
+						acc +
+						lesson.steps.filter((step) => step.status === "completed").length
+					);
+				}, 0);
+				const totalSteps = progress.lessons.reduce((acc, lesson) => {
+					return acc + lesson.steps.length;
+				}, 0);
+				progressReport += `- Current Lesson: ${progress.lessons[progress.currentLesson].title}\n`;
+				progressReport += `- Lessons Completed: ${completedLessons} / ${totalLessons}\n`;
+				progressReport += `- Steps Completed: ${completedSteps} / ${totalSteps}\n\n`;
+
+				progressReport += "## Lessons\n\n";
+				for (const lesson of progress.lessons) {
+					progressReport += `### ${lesson.status === "completed" ? "✅" : "🚧"} ${lesson.title}\n\n`;
+					for (const step of lesson.steps) {
+						progressReport += `- ${step.status === "completed" ? "✅" : "🚧"} ${step.title}\n`;
+					}
+					progressReport += "\n";
+				}
+
+				progressReport += "## Navigation\n\n";
+				progressReport += "- To continue the course: `nextAstroCourseStep`\n";
+				progressReport += "- To reset progress: `clearAstroCourseHistory`\n";
+
+				return { content: [{ type: "text", text: progressReport }] };
+			} catch (error) {
+				return {
+					content: [
+						{
+							type: "text",
+							text: `Error getting course progress: ${error instanceof Error ? error.message : String(error)}`,
+						},
+					],
+				};
+			}
 		},
 	);
 }
@@ -250,33 +329,44 @@ export async function clearAstroCourseProgress(mcpServer: McpServer) {
 			confirm: z.boolean().describe("Confirm clearing the course progress."),
 		},
 		async ({ confirm }) => {
-			if (!confirm) {
+			try {
+				if (!confirm) {
+					return {
+						content: [
+							{
+								type: "text",
+								text: "Are you sure you want to clear the course progress? This action cannot be undone.",
+							},
+						],
+					};
+				}
+
+				if (!existsSync(`${courseDir}/course-progress.json`)) {
+					return {
+						content: [{ type: "text", text: "No course progress found." }],
+					};
+				}
+
+				await fs.unlink(`${courseDir}/course-progress.json`);
+
 				return {
 					content: [
 						{
 							type: "text",
-							text: "Are you sure you want to clear the course progress? This action cannot be undone.",
+							text: "Course progress has been cleared. Use the `startAstroCourse` tool to restart the course from the beginning.",
+						},
+					],
+				};
+			} catch (error) {
+				return {
+					content: [
+						{
+							type: "text",
+							text: `Error clearing course progress: ${error instanceof Error ? error.message : String(error)}`,
 						},
 					],
 				};
 			}
-
-			if (!existsSync(`${courseDir}/course-progress.json`)) {
-				return {
-					content: [{ type: "text", text: "No course progress found." }],
-				};
-			}
-
-			await fs.unlink(`${courseDir}/course-progress.json`);
-
-			return {
-				content: [
-					{
-						type: "text",
-						text: "Course progress has been cleared. Use the `startAstroCourse` tool to restart the course from the beginning.",
-					},
-				],
-			};
 		},
 	);
 }
