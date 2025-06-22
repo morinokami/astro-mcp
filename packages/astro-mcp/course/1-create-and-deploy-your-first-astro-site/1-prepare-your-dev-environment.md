@@ -1,8 +1,8 @@
 # Prepare your dev environment
 
-<GetReadyTo>
-  - Install any tools that you will use to build your Astro website
-</GetReadyTo>
+> **🎯 Get Ready To**
+>
+> - Install any tools that you will use to build your Astro website
 
 ## Get the dev tools you need
 
@@ -33,10 +33,8 @@ If the command returns an error message like `Command 'node' not found`, or a ve
 
 Additionally, you will need to download and install a **code editor** to write your code.
 
-:::tip[We'll use...]
-This tutorial will use **VS Code**, but you can use any editor for your operating system.
-:::
+> **💡 We'll use...**
+>
+> This tutorial will use **VS Code**, but you can use any editor for your operating system.
 
-<Steps>
-1. [Download and install VS Code](https://code.visualstudio.com/#alt-downloads) or another code editor of your choice. 
-</Steps>
+1. [Download and install VS Code](https://code.visualstudio.com/#alt-downloads) or another code editor of your choice.

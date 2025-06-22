@@ -1,8 +1,8 @@
 # Store your repository online
 
-<GetReadyTo>
-  - Put your project repository online
-</GetReadyTo>
+> **🎯 Get Ready To**
+>
+> - Put your project repository online
 
 This course will use GitHub to store our repository and connect to a web host. You are welcome to use the online git provider of your choice.
 

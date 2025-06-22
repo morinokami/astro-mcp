@@ -1,15 +1,15 @@
 # Deploy your site to the web
 
-<GetReadyTo>
-  - Add your GitHub repository as a new Netlify app
-  - Deploy your Astro site to the web
-</GetReadyTo>
+> **🎯 Get Ready To**
+>
+> - Add your GitHub repository as a new Netlify app
+> - Deploy your Astro site to the web
 
 Here, you will connect your GitHub repository to Netlify. Netlify will use that project to build and deploy your site live on the web every time you commit a change to your code.
 
-:::tip[We'll use...]
-This course will use **Netlify**, but you are welcome to use your preferred hosting service for deploying your site to the internet.
-:::
+> **💡 We'll use...**
+>
+> This course will use **Netlify**, but you are welcome to use your preferred hosting service for deploying your site to the internet.
 
 ## Create a new Netlify site
 

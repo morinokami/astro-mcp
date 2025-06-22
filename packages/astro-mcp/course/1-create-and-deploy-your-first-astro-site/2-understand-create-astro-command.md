@@ -1,8 +1,8 @@
 # Understand how your Astro project was created
 
-<GetReadyTo>
-  - Understand how your Astro project was created
-</GetReadyTo>
+> **🎯 Get Ready To**
+>
+> - Understand how your Astro project was created
 
 ## ✅ Your setup is complete
 

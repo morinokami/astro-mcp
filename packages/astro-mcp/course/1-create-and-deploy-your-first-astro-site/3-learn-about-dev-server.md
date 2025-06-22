@@ -1,8 +1,8 @@
 # Learn about the development server that's already running
 
-<GetReadyTo>
-  - Learn about the development server that's already running
-</GetReadyTo>
+> **🎯 Get Ready To**
+>
+> - Learn about the development server that's already running
 
 ## About your development environment
 
@@ -27,10 +27,10 @@ This server:
 - Provides helpful error messages during development
 </details>
 
-:::tip[Using the Astro dev server]
-While the Astro server is running in dev mode, you will NOT be able to run commands in your terminal window. Instead, this pane will give you feedback as you preview your site.
-
-You can stop the dev server at any time and return to the command prompt by typing <kbd>Ctrl + C</kbd> in the terminal.
-
-Sometimes the dev server will stop on its own while you are working. If your live preview stops working, go back to the terminal and restart the dev server by typing `npm run dev`.
-:::
+> **💡 Using the Astro dev server**
+>
+> While the Astro server is running in dev mode, you will NOT be able to run commands in your terminal window. Instead, this pane will give you feedback as you preview your site.
+>
+> You can stop the dev server at any time and return to the command prompt by typing <kbd>Ctrl + C</kbd> in the terminal.
+>
+> Sometimes the dev server will stop on its own while you are working. If your live preview stops working, go back to the terminal and restart the dev server by typing `npm run dev`.

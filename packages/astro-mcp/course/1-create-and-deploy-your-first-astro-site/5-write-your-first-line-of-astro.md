@@ -1,8 +1,8 @@
 # Write your first line of Astro
 
-<GetReadyTo>
-  - Make your first edit to your new website
-</GetReadyTo>
+> **🎯 Get Ready To**
+>
+> - Make your first edit to your new website
 
 ## Edit your home page
 

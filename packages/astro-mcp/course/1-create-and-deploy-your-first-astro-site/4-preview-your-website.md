@@ -1,8 +1,8 @@
 # View a live preview of your website in your browser
 
-<GetReadyTo>
-  - View a live preview of your website in your browser
-</GetReadyTo>
+> **🎯 Get Ready To**
+>
+> - View a live preview of your website in your browser
 
 ## View a preview of your website
 
