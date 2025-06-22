@@ -25,6 +25,31 @@
 				{
 					"title": "1-prepare-your-dev-environment",
 					"status": "not-started"
+				},
+				{
+					"title": "2-understand-create-astro-command",
+					"status": "not-started"
+				},
+				{
+					"title": "3-learn-about-dev-server",
+					"status": "not-started"
+				},
+
+				{
+					"title": "4-preview-your-website",
+					"status": "not-started"
+				},
+				{
+					"title": "5-write-your-first-line-of-astro",
+					"status": "not-started"
+				},
+				{
+					"title": "6-store-your-repository-online",
+					"status": "not-started"
+				},
+				{
+					"title": "7-deploy-your-site-to-the-web",
+					"status": "not-started"
 				}
 			]
 		}
