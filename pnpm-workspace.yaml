@@ -6,21 +6,21 @@ catalog:
   "@astrojs/mdx": 4.3.0
   "@astrojs/rss": 4.0.12
   "@astrojs/sitemap": 3.4.1
-  "@biomejs/biome": 1.9.4
+  "@biomejs/biome": 2.0.5
   "@changesets/changelog-github": 0.5.1
-  "@changesets/cli": 2.29.4
-  "@cloudflare/workers-types": 4.20250617.0
-  "@types/node": 22.15.31
-  astro: 5.9.4
+  "@changesets/cli": 2.29.5
+  "@cloudflare/workers-types": 4.20250620.0
+  "@types/node": 22.15.32
+  astro: 5.10.0
   async-cache-dedupe: 2.2.0
-  knip: 5.61.1
-  pkg-pr-new: 0.0.51
+  knip: 5.61.2
+  pkg-pr-new: 0.0.53
   publint: 0.3.12
-  tsdown: 0.12.7
+  tsdown: 0.12.8
   typescript: 5.8.3
   unbuild: 3.5.0
   vite-plugin-mcp: 0.2.3
-  wrangler: 4.20.0
+  wrangler: 4.20.5
   zod: 3.25.67
 
 onlyBuiltDependencies:

@@ -2,7 +2,7 @@
 	"private": true,
 	"name": "astro-mcp-root",
 	"type": "module",
-	"packageManager": "pnpm@10.12.1",
+	"packageManager": "pnpm@10.12.3",
 	"scripts": {
 		"mcp": "pnpm --filter \"astro-mcp\"",
 		"docs-search": "pnpm --filter \"astro-docs-search\"",

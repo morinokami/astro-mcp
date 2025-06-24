@@ -36,7 +36,7 @@ export default function createAstroMcpIntegration({
 	const astroConfig = {} as AstroConfig;
 	const astroRoutes: IntegrationResolvedRoute[] = [];
 	const astroServerAddress = {} as AddressInfo;
-	let mcp: McpServer | undefined = undefined;
+	let mcp: McpServer | undefined;
 
 	return {
 		name: INTEGRATION_NAME,
@@ -108,9 +108,7 @@ export default function createAstroMcpIntegration({
 declare global {
 	namespace Astro {
 		export interface IntegrationHooks {
-			"mcp:setup"?: (options: {
-				mcp: McpServer;
-			}) => void | Promise<void>;
+			"mcp:setup"?: (options: { mcp: McpServer }) => void | Promise<void>;
 		}
 	}
 }
