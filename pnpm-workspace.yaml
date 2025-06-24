@@ -9,12 +9,12 @@ catalog:
   "@biomejs/biome": 2.0.5
   "@changesets/changelog-github": 0.5.1
   "@changesets/cli": 2.29.5
-  "@cloudflare/workers-types": 4.20250617.0
-  "@types/node": 22.15.31
-  astro: 5.9.4
+  "@cloudflare/workers-types": 4.20250620.0
+  "@types/node": 22.15.32
+  astro: 5.10.0
   async-cache-dedupe: 2.2.0
   knip: 5.61.2
-  pkg-pr-new: 0.0.51
+  pkg-pr-new: 0.0.53
   publint: 0.3.12
   tsdown: 0.12.8
   typescript: 5.8.3
