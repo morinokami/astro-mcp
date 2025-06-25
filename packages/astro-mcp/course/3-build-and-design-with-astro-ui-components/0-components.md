@@ -1,4 +1,4 @@
-# Build and design with Astro UI components
+# Check in: Lesson 3 - Components
 
 Now that you have `.astro` and `.md` files generating entire pages on your website, it's time to make and reuse smaller bits of HTML with Astro components!
 
