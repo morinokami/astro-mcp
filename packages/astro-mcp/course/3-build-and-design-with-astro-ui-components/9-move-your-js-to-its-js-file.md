@@ -4,7 +4,7 @@
 >
 > - Move your JavaScript to its `.js` file
 
-### Importing a `.js` file
+## Importing a `.js` file
 
 Instead of writing your JavaScript directly on each page, you can move the contents of your `<script>` tag into its own `.js` file in your project.
 
