@@ -11,7 +11,7 @@ catalog:
   "@changesets/cli": 2.29.5
   "@cloudflare/workers-types": 4.20250620.0
   "@types/node": 22.15.32
-  astro: 5.10.0
+  astro: 5.11.0
   async-cache-dedupe: 2.2.0
   knip: 5.61.2
   pkg-pr-new: 0.0.53

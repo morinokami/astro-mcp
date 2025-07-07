@@ -31,8 +31,8 @@ catalogs:
       specifier: 22.15.32
       version: 22.15.32
     astro:
-      specifier: 5.10.0
-      version: 5.10.0
+      specifier: 5.11.0
+      version: 5.11.0
     async-cache-dedupe:
       specifier: 2.2.0
       version: 2.2.0
@@ -116,7 +116,7 @@ importers:
         version: 4.20250620.0
       astro:
         specifier: 'catalog:'
-        version: 5.10.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
+        version: 5.11.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
       publint:
         specifier: 'catalog:'
         version: 0.3.12
@@ -131,7 +131,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 'catalog:'
-        version: 4.3.0(astro@5.10.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))
+        version: 4.3.0(astro@5.11.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))
       '@astrojs/rss':
         specifier: 'catalog:'
         version: 4.0.12
@@ -140,7 +140,7 @@ importers:
         version: 3.4.1
       astro:
         specifier: 'catalog:'
-        version: 5.10.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
+        version: 5.11.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
       astro-mcp:
         specifier: workspace:*
         version: link:../packages/astro-mcp
@@ -1169,8 +1169,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@5.10.0:
-    resolution: {integrity: sha512-g/t54kVzQnFVijs+GbbbX/NBAFTl/3yNAEA/AQYq4FumLLVv7n4BIF+jKhcPGn9iFGyT1Cjvr7KB/qYyNvHEIg==}
+  astro@5.11.0:
+    resolution: {integrity: sha512-MEICntERthUxJPSSDsDiZuwiCMrsaYy3fnDhp4c6ScUfldCB8RBnB/myYdpTFXpwYBy6SgVsHQ1H4MuuA7ro/Q==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3212,12 +3212,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.10.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))':
+  '@astrojs/mdx@4.3.0(astro@5.11.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.10.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
+      astro: 5.11.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -4079,7 +4079,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
 
   '@types/hast@3.0.4':
     dependencies:
@@ -4187,7 +4187,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.10.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3):
+  astro@5.11.0(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.0)(typescript@5.8.3):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
