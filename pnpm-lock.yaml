@@ -58,8 +58,8 @@ catalogs:
       specifier: 4.25.0
       version: 4.25.0
     zod:
-      specifier: 3.25.67
-      version: 3.25.67
+      specifier: 4.0.10
+      version: 4.0.10
 
 importers:
 
@@ -109,7 +109,7 @@ importers:
         version: 0.2.3(vite@6.3.5(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.29.3))
       zod:
         specifier: 'catalog:'
-        version: 3.25.67
+        version: 4.0.10
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
@@ -146,7 +146,7 @@ importers:
         version: link:../packages/astro-mcp
       zod:
         specifier: 'catalog:'
-        version: 3.25.67
+        version: 4.0.10
 
 packages:
 
@@ -3175,6 +3175,9 @@ packages:
 
   zod@3.25.67:
     resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
+
+  zod@4.0.10:
+    resolution: {integrity: sha512-3vB+UU3/VmLL2lvwcY/4RV2i9z/YU0DTV/tDuYjrwmx5WeJ7hwy+rGEEx8glHp6Yxw7ibRbKSaIFBgReRPe5KA==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -6693,5 +6696,7 @@ snapshots:
   zod@3.22.3: {}
 
   zod@3.25.67: {}
+
+  zod@4.0.10: {}
 
   zwitch@2.0.4: {}
