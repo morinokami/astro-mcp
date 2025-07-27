@@ -3,7 +3,7 @@ packages:
   - playground
 
 catalog:
-  "@astrojs/mdx": 4.3.0
+  "@astrojs/mdx": 4.3.1
   "@astrojs/rss": 4.0.12
   "@astrojs/sitemap": 3.4.1
   "@biomejs/biome": 2.0.5
