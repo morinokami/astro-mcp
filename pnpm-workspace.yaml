@@ -18,7 +18,7 @@ catalog:
   publint: 0.3.12
   tsdown: 0.13.0
   typescript: 5.8.3
-  unbuild: 3.5.0
+  unbuild: 3.6.0
   vite-plugin-mcp: 0.2.3
   wrangler: 4.25.0
   zod: 4.0.10
