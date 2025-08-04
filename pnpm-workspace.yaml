@@ -20,7 +20,7 @@ catalog:
   typescript: 5.8.3
   unbuild: 3.5.0
   vite-plugin-mcp: 0.2.3
-  wrangler: 4.25.0
+  wrangler: 4.27.0
   zod: 4.0.10
 
 onlyBuiltDependencies:
