@@ -58,8 +58,8 @@ catalogs:
       specifier: 4.25.0
       version: 4.25.0
     zod:
-      specifier: 4.0.10
-      version: 4.0.10
+      specifier: 4.0.17
+      version: 4.0.17
 
 importers:
 
@@ -109,7 +109,7 @@ importers:
         version: 0.2.4(vite@6.3.5(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.29.3))
       zod:
         specifier: 'catalog:'
-        version: 4.0.10
+        version: 4.0.17
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 'catalog:'
@@ -146,7 +146,7 @@ importers:
         version: link:../packages/astro-mcp
       zod:
         specifier: 'catalog:'
-        version: 4.0.10
+        version: 4.0.17
 
 packages:
 
@@ -3198,14 +3198,11 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@3.25.67:
-    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
-
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.0.10:
-    resolution: {integrity: sha512-3vB+UU3/VmLL2lvwcY/4RV2i9z/YU0DTV/tDuYjrwmx5WeJ7hwy+rGEEx8glHp6Yxw7ibRbKSaIFBgReRPe5KA==}
+  zod@4.0.17:
+    resolution: {integrity: sha512-1PHjlYRevNxxdy2JZ8JcNAw7rX8V9P1AKkP+x/xZfxB0K5FYfuV+Ug6P/6NVSR2jHQ+FzDDoDHS04nYUsOIyLQ==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -3274,7 +3271,7 @@ snapshots:
     dependencies:
       sitemap: 8.0.0
       stream-replace-string: 2.0.0
-      zod: 3.25.67
+      zod: 3.25.76
 
   '@astrojs/telemetry@3.3.0':
     dependencies:
@@ -4327,9 +4324,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
-      zod: 3.25.67
-      zod-to-json-schema: 3.24.5(zod@3.25.67)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.67)
+      zod: 3.25.76
+      zod-to-json-schema: 3.24.5(zod@3.25.76)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.76)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -5181,8 +5178,8 @@ snapshots:
       smol-toml: 1.3.4
       strip-json-comments: 5.0.2
       typescript: 5.8.3
-      zod: 3.25.67
-      zod-validation-error: 3.4.0(zod@3.25.67)
+      zod: 3.25.76
+      zod-validation-error: 3.4.0(zod@3.25.76)
 
   lightningcss-darwin-arm64@1.29.3:
     optional: true
@@ -5961,7 +5958,7 @@ snapshots:
       quick-lru: 7.0.1
       url-join: 5.0.0
       validate-npm-package-name: 5.0.1
-      zod: 3.25.67
+      zod: 3.25.76
       zod-package-json: 1.1.0
 
   query-string@9.1.1:
@@ -6747,31 +6744,25 @@ snapshots:
 
   zod-package-json@1.1.0:
     dependencies:
-      zod: 3.25.67
-
-  zod-to-json-schema@3.24.5(zod@3.25.67):
-    dependencies:
-      zod: 3.25.67
+      zod: 3.25.76
 
   zod-to-json-schema@3.24.5(zod@3.25.76):
     dependencies:
       zod: 3.25.76
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.67):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.76):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.67
+      zod: 3.25.76
 
-  zod-validation-error@3.4.0(zod@3.25.67):
+  zod-validation-error@3.4.0(zod@3.25.76):
     dependencies:
-      zod: 3.25.67
+      zod: 3.25.76
 
   zod@3.22.3: {}
 
-  zod@3.25.67: {}
-
   zod@3.25.76: {}
 
-  zod@4.0.10: {}
+  zod@4.0.17: {}
 
   zwitch@2.0.4: {}
