@@ -17,7 +17,7 @@ catalog:
   pkg-pr-new: 0.0.54
   publint: 0.3.12
   tsdown: 0.14.1
-  typescript: 5.8.3
+  typescript: 5.9.2
   unbuild: 3.6.1
   vite-plugin-mcp: 0.2.4
   wrangler: 4.32.0
