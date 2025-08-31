@@ -8,7 +8,7 @@ catalog:
   "@astrojs/sitemap": 3.4.1
   "@biomejs/biome": 2.2.2
   "@changesets/changelog-github": 0.5.1
-  "@changesets/cli": 2.29.5
+  "@changesets/cli": 2.29.6
   "@cloudflare/workers-types": 4.20250726.0
   "@types/node": 22.16.5
   astro: 5.12.3
