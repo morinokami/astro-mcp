@@ -16,7 +16,7 @@ catalog:
   knip: 5.63.0
   pkg-pr-new: 0.0.58
   publint: 0.3.12
-  tsdown: 0.14.1
+  tsdown: 0.14.2
   typescript: 5.9.2
   unbuild: 3.6.1
   vite-plugin-mcp: 0.2.4
