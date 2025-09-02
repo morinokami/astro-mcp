@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install git-restore-mtime
         run: |
@@ -17,13 +17,13 @@ jobs:
           sudo apt-get install git-restore-mtime
 
       - name: Clone Astro docs repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: withastro/docs
           path: astro-docs
 
       - name: Clone Starlight repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: withastro/starlight
           path: starlight
