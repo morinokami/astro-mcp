@@ -3,14 +3,14 @@ packages:
   - playground
 
 catalog:
-  "@astrojs/mdx": 4.3.4
-  "@astrojs/rss": 4.0.12
-  "@astrojs/sitemap": 3.5.1
-  "@biomejs/biome": 2.2.3
-  "@changesets/changelog-github": 0.5.1
-  "@changesets/cli": 2.29.6
-  "@cloudflare/workers-types": 4.20250911.0
-  "@types/node": 22.18.1
+  '@astrojs/mdx': 4.3.4
+  '@astrojs/rss': 4.0.12
+  '@astrojs/sitemap': 3.5.1
+  '@biomejs/biome': 2.2.3
+  '@changesets/changelog-github': 0.5.1
+  '@changesets/cli': 2.29.6
+  '@cloudflare/workers-types': 4.20250911.0
+  '@types/node': 22.18.1
   astro: 5.13.5
   async-cache-dedupe: 3.0.0
   knip: 5.63.1
@@ -24,8 +24,9 @@ catalog:
   zod: 4.1.5
 
 onlyBuiltDependencies:
-  - "@biomejs/biome"
+  - '@biomejs/biome'
   - esbuild
+  - oxc-resolver
   - rolldown
   - sharp
   - workerd
