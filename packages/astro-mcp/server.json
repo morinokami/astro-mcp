@@ -7,13 +7,13 @@
     "url": "https://github.com/morinokami/astro-mcp",
     "source": "github"
   },
-  "version": "0.4.1",
+  "version": "0.4.2",
   "packages": [
     {
       "registry_type": "npm",
       "registry_base_url": "https://registry.npmjs.org",
       "identifier": "astro-mcp",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "transport": {
         "type": "sse",
         "url": "http://localhost:4321/__mcp/sse"
