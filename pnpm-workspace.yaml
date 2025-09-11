@@ -14,7 +14,7 @@ catalog:
   astro: 5.13.5
   async-cache-dedupe: 2.2.0
   knip: 5.63.0
-  pkg-pr-new: 0.0.58
+  pkg-pr-new: 0.0.59
   publint: 0.3.12
   tsdown: 0.14.2
   typescript: 5.9.2
