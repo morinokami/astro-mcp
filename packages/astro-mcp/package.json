@@ -1,5 +1,6 @@
 {
 	"name": "astro-mcp",
+	"mcpName": "io.github.morinokami/astro-mcp",
 	"version": "0.4.1",
 	"description": "MCP server to support Astro project development",
 	"keywords": [

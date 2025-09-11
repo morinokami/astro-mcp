@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.morinokami/astro-mcp",
+  "description": "MCP server to support Astro project development",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/morinokami/astro-mcp",
+    "source": "github"
+  },
+  "version": "0.4.1",
+  "packages": [
+    {
+      "registry_type": "npm",
+      "registry_base_url": "https://registry.npmjs.org",
+      "identifier": "astro-mcp",
+      "version": "0.4.1",
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:4321/__mcp/sse"
+      }
+    }
+  ]
+}
