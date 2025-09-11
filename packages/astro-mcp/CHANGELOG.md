@@ -1,5 +1,11 @@
 # astro-mcp
 
+## 0.4.2
+
+### Patch Changes
+
+- [#164](https://github.com/morinokami/astro-mcp/pull/164) [`671417a`](https://github.com/morinokami/astro-mcp/commit/671417a13c65cc244cb6b8749cefc4df88b2c49e) Thanks [@morinokami](https://github.com/morinokami)! - Publish astro-mcp to official MCP registry
+
 ## 0.4.1
 
 ### Patch Changes
