@@ -41,7 +41,7 @@ export default defineConfig({
 
 ## Usage
 
-After installing the integration, the MCP server will be available at http://localhost:4321/__mcp/sse. To connect, create an empty configuration file in the appropriate location for your editor or tool:
+After installing the integration, the MCP server will be available at http://localhost:4321/\_\_mcp/sse. To connect, create an empty configuration file in the appropriate location for your editor or tool:
 
 | Editor/Tool | Configuration File                    |
 | ----------- | ------------------------------------- |
@@ -99,3 +99,17 @@ export default function createExampleIntegration(): AstroIntegration {
 - `get-vite-module-info`: Get graph information of a module, including importers, imported modules, and compiled result
   - Parameters:
     - `filepath` (string): The absolute filepath of the module
+
+## Course
+
+`astro-mcp` also provides a course to help you learn Astro. To get started, create a new Astro project with the `create astro` command:
+
+1. Run `npm create astro@latest`
+2. When the prompt asks you where to create the project, type in the name of your project
+3. When the prompt asks you to select a template, choose the minimal (empty) template
+4. When the prompt asks you whether or not to install dependencies, enter `y`
+5. When the prompt asks you whether or not to initialize a new git repository, enter `y`
+
+After the project is created, `cd` into the project directory and run `npx astro add astro-mcp` to install the `astro-mcp` package. Then, create a new MCP configuration file in the appropriate location for your editor or tool following the instructions in the [Usage](#usage) section. Finally, start the Astro dev server by running `npm run dev`.
+
+That's it! You can now start the course by typing `start astro course` in the chat interface of your favorite MCP client like Cursor or Claude Code.

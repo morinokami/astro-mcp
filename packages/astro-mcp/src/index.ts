@@ -16,6 +16,12 @@ import {
 } from "./tools/list-astro-integrations";
 import { listAstroRoutes } from "./tools/list-astro-routes";
 import { searchAstroDocs } from "./tools/search-astro-docs";
+import {
+	clearAstroCourseProgress,
+	getAstroCourseProgress,
+	nextAstroCourseStep,
+	startAstroCourse,
+} from "./tools/start-astro-course";
 
 const INTEGRATION_NAME = "astro-mcp";
 const SERVER_NAME = "astro";
@@ -61,6 +67,10 @@ export default function createAstroMcpIntegration({
 										getAstroIntegration(mcpServer);
 										searchAstroDocs(mcpServer);
 										getAstroChanges(mcpServer);
+										startAstroCourse(mcpServer);
+										nextAstroCourseStep(mcpServer);
+										getAstroCourseProgress(mcpServer);
+										clearAstroCourseProgress(mcpServer);
 									},
 								}),
 							],
