@@ -1,0 +1,57 @@
+{
+	"lessons": [
+		{
+			"title": "0-introduction",
+			"status": "not-started",
+			"steps": [
+				{
+					"title": "0-build-your-first-astro-blog",
+					"status": "not-started"
+				},
+				{
+					"title": "1-about-this-course",
+					"status": "not-started"
+				}
+			]
+		},
+		{
+			"title": "1-create-and-deploy-your-first-astro-site",
+			"status": "not-started",
+			"steps": [
+				{
+					"title": "0-setup",
+					"status": "not-started"
+				},
+				{
+					"title": "1-prepare-your-dev-environment",
+					"status": "not-started"
+				},
+				{
+					"title": "2-understand-create-astro-command",
+					"status": "not-started"
+				},
+				{
+					"title": "3-learn-about-dev-server",
+					"status": "not-started"
+				},
+
+				{
+					"title": "4-preview-your-website",
+					"status": "not-started"
+				},
+				{
+					"title": "5-write-your-first-line-of-astro",
+					"status": "not-started"
+				},
+				{
+					"title": "6-store-your-repository-online",
+					"status": "not-started"
+				},
+				{
+					"title": "7-deploy-your-site-to-the-web",
+					"status": "not-started"
+				}
+			]
+		}
+	]
+}
